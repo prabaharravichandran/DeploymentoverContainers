@@ -1,0 +1,63 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+%files
+    # Copy the requirements file inside the container from the apptainer folder
+    /gpfs/fs7/aafc/phenocart/PhenomicsProjects/UFPSGPSCProject/4_Assets/Singularity/DeploymentContainers/apptainer/requirements.txt /home/ufps/requirements.txt
+
+%post
+    # Create directories on the container's root
+    mkdir -p /fs /gpfs /space
+
+    # Update and install necessary system dependencies
+    apt-get update
+    apt-get install -y \
+        software-properties-common \
+        python3-pip \
+        python3-venv \
+        python3-dev \
+        build-essential \
+        git \
+        curl \
+        libpq-dev \
+        vim \
+        wget \
+        libsqlite3-dev \
+        lsb-release \
+        ca-certificates
+
+    # Add the deadsnakes repository to get the latest Python version
+    add-apt-repository ppa:deadsnakes/ppa
+    apt-get update
+
+    # Install Python 3.12 and its dependencies
+    apt-get install -y python3.12 python3.12-venv python3.12-dev
+
+    # Update alternatives so that python3 points to python3.12
+    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1
+
+    # Create a virtual environment using Python 3.12
+    python3.12 -m venv /home/venv
+
+    # Upgrade pip in the virtual environment
+    /home/venv/bin/python -m pip install --upgrade pip
+
+    # Install virtualenv to facilitate creating virtual environments
+    /home/venv/bin/pip install virtualenv
+
+    # Activate the virtual environment and install dependencies from requirements.txt
+    . /home/venv/bin/activate
+    cd /home/ufps
+    pip install -r requirements.txt
+
+    # Create a new Django project called "ufps"
+    django-admin startproject ufps .
+
+%runscript
+#!/bin/bash
+# Activate the virtual environment
+. /home/venv/bin/activate
+cd /home/ufps
+
+# Start Gunicorn in the background with 3 workers
+gunicorn --workers 3 ufps.wsgi:application
