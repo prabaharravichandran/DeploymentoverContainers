@@ -179,7 +179,7 @@ sudo systemctl enable apptainer.service
 sudo systemctl start apptainer.service
 ```
 
-## Development of web application in Django
+## Local development of web application in Django
 
 Just to start Gunicorn for dev; Make sure the venv is active and one the ufps django project.
 
@@ -199,4 +199,81 @@ To kill it,
 
 ```bash
 kill $(pgrep gunicorn)
+```
+
+let us create a home app...
+
+```bash
+python manage.py startapp home
+```
+
+```bash
+INSTALLED_APPS = [
+    # ... other installed apps
+    'home',
+]
+```
+add this to home's views.py
+
+```python
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'index.html')
+```
+
+add urls,
+```python
+# home/urls.py
+from django.urls import path
+from .views import index
+
+urlpatterns = [
+    path('', index, name='index'),
+]
+```
+
+make changes to project/urls,
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('home.urls')),
+]
+```
+
+add templates and index.html in it. make changes to settings.py
+```python
+import os
+from pathlib import Path
+
+# Assuming BASE_DIR is already defined as the project root
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # Add your global templates directory here
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,  # This will look for templates in each app's templates folder
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
+
+make and apply migration,
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
 ```
