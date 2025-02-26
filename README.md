@@ -178,3 +178,25 @@ sudo systemctl daemon-reload
 sudo systemctl enable apptainer.service
 sudo systemctl start apptainer.service
 ```
+
+## Development of web application in Django
+
+Just to start Gunicorn for dev; Make sure the venv is active and one the ufps django project.
+
+```bash
+# Start Gunicorn in the background with 3 workers
+gunicorn --workers 3 ufps.wsgi:application
+```
+
+To run Gunicorn as a daemon,
+
+```bash
+# Start Gunicorn in the background with 3 workers
+gunicorn --workers 3 --daemon ufps.wsgi:application
+```
+
+To kill it,
+
+```bash
+kill $(pgrep gunicorn)
+```
