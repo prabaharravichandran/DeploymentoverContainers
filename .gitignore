@@ -1,1 +1,4 @@
 /venv/
+/.idea/
+/AWS/AWS_apptainer/
+/AWS/AWS_apptainer.sif

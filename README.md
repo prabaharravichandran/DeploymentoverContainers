@@ -35,6 +35,74 @@ tar -czvf apptainer_blankDjango+Gunicorn.tar.gz apptainer_sandbox
 tar -xzvf apptainer_blankDjango+Gunicorn.tar.gz
 ```
 
+
+### Docker
+
+Create Dockerfile (i.e. recipe), build and run,
+
+```bash
+docker build -t ufps-apptainer .
+docker run -p 8000:8000 ufps-apptainer
+```
+
+to archive/save the image,
+
+```bash
+docker save -o ufps-apptainer.tar ufps-apptainer:latest
+```
+
+to push them to ecr, (may have to install aws cli and configure on host)
+
+```bash
+docker tag ufps/apptainer:latest 637423168372.dkr.ecr.ca-central-1.amazonaws.com/ufps/apptainer:latest
+aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 637423168372.dkr.ecr.ca-central-1.amazonaws.com
+docker push 637423168372.dkr.ecr.ca-central-1.amazonaws.com/ufps/apptainer:latest
+```
+## Preparing AWS
+
+We have AWS image for web development, we can use that to launch an instance.
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup curl git
+```
+
+Install Go,
+
+```bash
+sudo apt install golang-go
+go version
+```
+
+Install Apptainer,
+
+```bash
+sudo git clone https://github.com/apptainer/apptainer.git
+cd apptainer
+git checkout v1.4.0  # Replace with the latest stable version
+```
+
+Build and install,
+
+```bash
+ sudo sh -c 'echo "1.0.0" > VERSION'
+sudo ./mconfig && make -C builddir && sudo make -C builddir install
+```
+
+## Building Containers
+
+Building a sandbox container,
+
+```bash
+sudo apptainer build --sandbox AWS_apptainer singularity.def
+```
+
+If single-file image (SIF),
+
+```bash
+sudo apptainer build AWS_apptainer.sif AWS_apptainer/
+```
+
 If Nginx is required, lets keep it away from containers. Container just holds Django and Gunicorn.
 
 
@@ -50,7 +118,7 @@ sudo apt install nginx -y
 Prepare config for application (ufps),
 
 ```bash
-nano /etc/nginx/sites-available/ufps
+sudo nano /etc/nginx/sites-available/ufps
 ```
 
 add,
@@ -97,7 +165,7 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/apptainer run /home/ubuntu/apptainer/apptainer_sandbox
+ExecStart=/usr/local/bin/apptainer run /home/ubuntu/AWS/AWS_apptainer
 RemainAfterExit=no
 
 [Install]
@@ -109,27 +177,4 @@ reload, enable, and start.
 sudo systemctl daemon-reload
 sudo systemctl enable apptainer.service
 sudo systemctl start apptainer.service
-```
-
-### Docker
-
-Create Dockerfile (i.e. recipe), build and run,
-
-```bash
-docker build -t ufps-apptainer .
-docker run -p 8000:8000 ufps-apptainer
-```
-
-to archive/save the image,
-
-```bash
-docker save -o ufps-apptainer.tar ufps-apptainer:latest
-```
-
-to push them to ecr, (may have to install aws cli and configure on host)
-
-```bash
-docker tag ufps/apptainer:latest 637423168372.dkr.ecr.ca-central-1.amazonaws.com/ufps/apptainer:latest
-aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 637423168372.dkr.ecr.ca-central-1.amazonaws.com
-docker push 637423168372.dkr.ecr.ca-central-1.amazonaws.com/ufps/apptainer:latest
 ```
