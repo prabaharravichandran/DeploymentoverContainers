@@ -126,7 +126,7 @@ add,
 ```text
 server {
     listen 80;
-    server_name localhost;  # Adjust as needed
+    server_name localhost;  # Important replace with Elastic IP
 
     location / {
         proxy_pass http://127.0.0.1:8000;  # Gunicorn will be listening here
