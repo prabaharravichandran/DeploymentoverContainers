@@ -14,7 +14,16 @@
     <link rel="icon" type="image/x-icon" href="{% static 'assets/images/favicon.ico' %}">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sticky-footer/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        flatpickr(["#imagingdate", "#harvestdate"], {
+          dateFormat: "Y-m-d", // Adjust format as needed
+        });
+      });
+    </script>
 
     <style>
       .bd-placeholder-img {
@@ -152,20 +161,95 @@
     </div>
 
 
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-  <div class="container-fluid">
-    <h1 class="mt-5">UFPS Data Management and Analysis</h1>
-    <p class="lead">We have created a simple home application that serves static files; We have used assests from Bootstrap 5.3.3. To serve static files through gunicorn in dev environment we are also using WhiteNoise package.</p>
-  </div>
-</main>
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container-fluid px-5">
+        <h1 class="mt-5">UFPS Data Management and Analysis</h1>
+        <p class="lead">
+          We have created a simple home application that serves static files; We have used assets from Bootstrap 5.3.3. To serve static files through gunicorn in dev environment we are also using WhiteNoise package.
+        </p>
+      </div>
+      <!-- Split the next section into two columns -->
+      <section id="forms" class="container-fluid px-lg-5 mt-5">
+        <article class="my-3" id="overview">
+          <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+            <h3>Yield Estimation</h3>
+          </div>
 
-<footer class="footer mt-auto py-3 bg-body-tertiary">
-  <div class="container-fluid">
-    <span class="text-body-secondary">&copy; 2025 Prabahar Ravichandran</span>
-  </div>
-</footer>
-<script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+          <div class="bd-example-snippet bd-code-snippet">
+            <!-- Row with two columns -->
+            <div class="row">
+              <!-- Left column: Form -->
+              <div class="col-md-6">
+                <form>
+                  <!-- RGB Image -->
+                  <div class="mb-3 w-50" style="max-width: 300px;">
+                    <label class="form-label" for="rgbimage">RGB Image (.TIF)</label>
+                    <input type="file" class="form-control" id="rgbimage">
+                  </div>
+
+                  <!-- NIR Image -->
+                  <div class="mb-3 w-50" style="max-width: 300px;">
+                    <label class="form-label" for="nirimage">NIR Image (.TIF)</label>
+                    <input type="file" class="form-control" id="nirimage">
+                  </div>
+
+                  <!-- LiDAR Data -->
+                  <div class="mb-3 w-50" style="max-width: 300px;">
+                    <label class="form-label" for="lidardata">LiDAR Data (.NPY)</label>
+                    <input type="file" class="form-control" id="lidardata">
+                  </div>
+
+                  <!-- Weather Data -->
+                  <div class="mb-3 w-50" style="max-width: 300px;">
+                    <label class="form-label" for="weatherdata">Weather Data (.NPY)</label>
+                    <input type="file" class="form-control" id="weatherdata">
+                  </div>
+
+                  <!-- Imaging Date -->
+                  <div class="mb-3 w-25" style="max-width: 200px;">
+                    <label for="imagingdate" class="form-label">Imaging Date</label>
+                    <input type="date" class="form-control" id="imagingdate" placeholder="Select a date">
+                  </div>
+
+                  <!-- Harvest Date (or any other date) -->
+                  <div class="mb-3 w-25" style="max-width: 200px;">
+                    <label for="harvestdate" class="form-label">Harvest Date</label>
+                    <input type="date" class="form-control" id="harvestdate" placeholder="Select a date">
+                  </div>
+
+                  <!-- Switch -->
+                  <div class="mb-3 form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">
+                      Checked switch checkbox input
+                    </label>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+              </div> <!-- end col-md-6 (form) -->
+
+              <!-- Right column: Reserve for output or other content -->
+              <div class="col-md-6">
+                <!-- This space can be used to display any output -->
+                <h3>Output</h3>
+                <p class="text-muted">Results or additional content can go here.</p>
+              </div>
+            </div> <!-- end row -->
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+      <div class="container-fluid px-5">
+        <span class="text-body-secondary">&copy; 2025 Prabahar Ravichandran</span>
+      </div>
+    </footer>
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     </body>
 </html>
