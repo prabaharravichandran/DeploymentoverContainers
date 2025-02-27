@@ -257,7 +257,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Add your global templates directory here
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,  # This will look for templates in each app's templates folder
         'OPTIONS': {
             'context_processors': [
@@ -276,4 +276,59 @@ make and apply migration,
 ```bash
 python manage.py makemigrations
 python manage.py migrate
+```
+
+```bash
+STATIC_URL = '/static/'
+# Optionally define STATICFILES_DIRS if you have a custom directory:
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+```
+
+in production, run
+
+```bash
+python manage.py collectstatic
+```
+
+```text
+(venv) prr000@vis-07:/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps$ python manage.py collectstatic
+
+127 static files copied to '/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps/staticfiles'.
+```
+
+Install WhiteNoise,
+WhiteNoise allows your web app to serve its own static files, making it a self-contained unit that can be deployed anywhere without relying on nginx, Amazon S3 or any other external service
+
+```python
+MIDDLEWARE = [
+    # ...
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # ...
+]
+```
+```python
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+```
+
+add this to wsgi.py
+
+```python
+
+import os
+from whitenoise import WhiteNoise
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ufps.settings')
+
+application = get_wsgi_application()
+application = WhiteNoise(application, root="/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps/static")
+application.add_files("/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps/static", prefix="more-files/")
 ```

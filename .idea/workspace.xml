@@ -5,11 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76a7a757-df09-4bc7-bb8c-53bda6e568b1" name="Changes" comment="AWS Setups">
-      <change afterPath="$PROJECT_DIR$/.idea/DeploymentoverContainers.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/css/sticky-footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/js/color-modes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/images/about.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/images/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/images/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/images/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/images/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/images/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/images/site.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DeploymentoverContainers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeploymentoverContainers.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ufps/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ufps/home/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ufps/ufps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ufps/ufps/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ufps/ufps/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ufps/ufps/wsgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +37,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/prabaharravichandran/DeploymentoverContainers.git",
+    "accountId": "d3b92e4f-6bb4-4efd-982f-cb488b49f865"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -48,6 +71,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/AWS" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Assets/ufps/static/assets/dist/js" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -68,6 +94,7 @@
       <workItem from="1740417718551" duration="6000" />
       <workItem from="1740591466331" duration="4131000" />
       <workItem from="1740595917417" duration="587000" />
+      <workItem from="1740629375795" duration="6467000" />
     </task>
     <task id="LOCAL-00001" summary="AWS Setups">
       <option name="closed" value="true" />

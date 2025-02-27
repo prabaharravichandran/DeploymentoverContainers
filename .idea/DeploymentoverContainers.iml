@@ -5,7 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/AWS/AWS_apptainer" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.12 virtualenv at /gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
