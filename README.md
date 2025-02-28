@@ -1,5 +1,10 @@
 # Building Containers for the Deployment of Django Applications in AWS
 
+<figure style="text-align: center;">
+  <img src="https://prabahar.s3.ca-central-1.amazonaws.com/static/articles/ApplicationUI.png" alt="Alt Text" style="max-width:100%;">
+  <figcaption>Django application user interface.</figcaption>
+</figure>
+
 ## Recipes for base images are located @ Images/Base Images
 
 ### Apptainer
