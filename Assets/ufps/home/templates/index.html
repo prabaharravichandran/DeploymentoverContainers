@@ -102,6 +102,15 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+
+        ul.custom-bullet {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      ul.custom-bullet li::before {
+        content: "> ";
+        color: black; /* You can change the color as needed */
+      }
     </style>
 
 
@@ -166,76 +175,99 @@
       <div class="container-fluid px-5">
         <h1 class="mt-5">UFPS Data Management and Analysis</h1>
         <p class="lead">
-          We have created a simple home application that serves static files; We have used assets from Bootstrap 5.3.3. To serve static files through gunicorn in dev environment we are also using WhiteNoise package.
         </p>
       </div>
+
       <!-- Split the next section into two columns -->
       <section id="forms" class="container-fluid px-lg-5 mt-5">
         <article class="my-3" id="overview">
           <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-            <h3>Yield Estimation</h3>
+            <h2>Days to Flowering & Maturity Estimation</h2>
           </div>
 
           <div class="bd-example-snippet bd-code-snippet">
             <!-- Row with two columns -->
             <div class="row">
               <!-- Left column: Form -->
-              <div class="col-md-6">
-                <form>
+              <div class="col-md-4">
+                <h3 style="text-align: left;">File upload for prediction</h3>
+                <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
                   <!-- RGB Image -->
                   <div class="mb-3 w-50" style="max-width: 300px;">
                     <label class="form-label" for="rgbimage">RGB Image (.TIF)</label>
-                    <input type="file" class="form-control" id="rgbimage">
+                    <input type="file" class="form-control" id="rgbimage" name="rgbimage" accept=".tif">
                   </div>
 
                   <!-- NIR Image -->
                   <div class="mb-3 w-50" style="max-width: 300px;">
                     <label class="form-label" for="nirimage">NIR Image (.TIF)</label>
-                    <input type="file" class="form-control" id="nirimage">
+                    <input type="file" class="form-control" id="nirimage" name="nirimage" accept=".tif">
                   </div>
 
                   <!-- LiDAR Data -->
                   <div class="mb-3 w-50" style="max-width: 300px;">
                     <label class="form-label" for="lidardata">LiDAR Data (.NPY)</label>
-                    <input type="file" class="form-control" id="lidardata">
+                    <input type="file" class="form-control" id="lidardata" name="lidardata" accept=".npy">
                   </div>
 
                   <!-- Weather Data -->
                   <div class="mb-3 w-50" style="max-width: 300px;">
                     <label class="form-label" for="weatherdata">Weather Data (.NPY)</label>
-                    <input type="file" class="form-control" id="weatherdata">
+                    <input type="file" class="form-control" id="weatherdata" name="weatherdata" accept=".npy">
                   </div>
 
                   <!-- Imaging Date -->
                   <div class="mb-3 w-25" style="max-width: 200px;">
                     <label for="imagingdate" class="form-label">Imaging Date</label>
-                    <input type="date" class="form-control" id="imagingdate" placeholder="Select a date">
+                    <input type="date" class="form-control" id="imagingdate" name="imagingdate" placeholder="Select a date">
                   </div>
 
                   <!-- Harvest Date (or any other date) -->
                   <div class="mb-3 w-25" style="max-width: 200px;">
-                    <label for="harvestdate" class="form-label">Harvest Date</label>
-                    <input type="date" class="form-control" id="harvestdate" placeholder="Select a date">
+                    <label for="seedingdate" class="form-label">Seeding Date</label>
+                    <input type="date" class="form-control" id="seedingdate" name="seedingdate" placeholder="Select a date">
                   </div>
 
                   <!-- Switch -->
                   <div class="mb-3 form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                     <label class="form-check-label" for="flexSwitchCheckChecked">
-                      Checked switch checkbox input
+                      Check to predict both flowering and maturity
                     </label>
                   </div>
-
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Predict</button>
                 </form>
-
               </div> <!-- end col-md-6 (form) -->
 
+                <!-- Middle column: Input Shapes -->
+                <div class="col-md-4">
+                  <h3 style="text-align: left;">Input</h3>
+                  {% if shapes_info %}
+                    <ul class="custom-bullet">
+                      {% for shape_text in shapes_info %}
+                        <li style="font-size: 1em;">{{ shape_text }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% else %}
+                    <p style="text-align: left;">No input shapes available.</p>
+                  {% endif %}
+                </div>
+
               <!-- Right column: Reserve for output or other content -->
-              <div class="col-md-6">
-                <!-- This space can be used to display any output -->
-                <h3>Output</h3>
-                <p class="text-muted">Results or additional content can go here.</p>
+              <div class="col-md-4">
+                <!-- Output section -->
+                <h3 style="text-align: left;">Output</h3>
+                {% if days_to_flowering and days_to_maturity %}
+                  <p style="text-align: left;">
+                    <p style="font-size: 1.5em; margin: 0;">Days to Flowering</p>
+                    <span style="font-size: 8em;">{{ days_to_flowering|floatformat:"0" }}</span><br>
+                    <p style="font-size: 1.5em; margin: 0;">Days to Maturity</p>
+                    <span style="font-size: 8em;">{{ days_to_maturity|floatformat:"0" }}</span>
+                  </p>
+                {% else %}
+                  <p style="text-align: left;">No predictions available yet.</p>
+                {% endif %}
               </div>
             </div> <!-- end row -->
           </div>
