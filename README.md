@@ -1,7 +1,7 @@
 # Building Containers for the Deployment of Django Applications in AWS
 
 <figure style="text-align: center;">
-  <img src="https://prabahar.s3.ca-central-1.amazonaws.com/static/articles/ApplicationUI.png" alt="Alt Text" style="max-width:100%;">
+  <img src="https://prabahar.s3.ca-central-1.amazonaws.com/static/articles/ApplicationUI_v2.png" alt="Alt Text" style="max-width:100%;">
     <figcaption style="text-align: center;">Django application user interface.</figcaption>
 </figure>
 
