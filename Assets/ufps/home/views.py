@@ -1,3 +1,4 @@
+import time
 import numpy as np
 import cv2
 from django.shortcuts import render
@@ -7,11 +8,19 @@ from sklearn.decomposition import PCA
 import tifffile
 import tensorflow as tf
 
-# Load the model with custom objects
-model = tf.keras.models.load_model(
+# -------------------------------------------------------------------------
+# 1) Load both models, giving them separate names
+# -------------------------------------------------------------------------
+days_model = tf.keras.models.load_model(
     "/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps/static/assets/models/maturity.h5",
     custom_objects={"mse": tf.keras.losses.MeanSquaredError()}
 )
+
+yield_model = tf.keras.models.load_model(
+    "/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps/static/assets/models/yield.h5",
+    custom_objects={"mse": tf.keras.losses.MeanSquaredError()}
+)
+
 
 def get_julian_day(date_str):
     """
@@ -23,11 +32,13 @@ def get_julian_day(date_str):
     date = datetime.strptime(date_str, "%Y-%m-%d")
     return date.timetuple().tm_yday
 
+
 def projection3x(lidar_raw):
     # Verify sufficient data for PCA
     if lidar_raw.shape[0] < 2 or lidar_raw.shape[1] < 2:
         raise ValueError(
-            f"Insufficient lidar data: {lidar_raw.shape[0]} samples and {lidar_raw.shape[1]} features. PCA cannot be applied.")
+            f"Insufficient lidar data: {lidar_raw.shape[0]} samples and {lidar_raw.shape[1]} features. PCA cannot be applied."
+        )
 
     x, y, z = lidar_raw[:, 0], lidar_raw[:, 1], lidar_raw[:, 2]
     x, y, z = x * 100, y * 100, z * 100
@@ -108,6 +119,7 @@ def projection3x(lidar_raw):
     # Final shape: (100, 300, 3)
     return np.dstack((resized_xy, resized_xz, resized_yz))
 
+
 def image_processing(image_array, target_size=(512, 612), is_nir=False):
     """
     Resize TIF images to (512,612).
@@ -116,26 +128,34 @@ def image_processing(image_array, target_size=(512, 612), is_nir=False):
         image_array = cv2.cvtColor(image_array, cv2.COLOR_GRAY2BGR)
     resized = cv2.resize(image_array, (target_size[1], target_size[0]), interpolation=cv2.INTER_LINEAR)
     if is_nir:
+        # If it's a single-channel image, ensure it’s shaped (H,W,1).
         if resized.ndim == 3 and resized.shape[2] == 3:
             resized = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
         if resized.ndim == 2:
             resized = np.expand_dims(resized, axis=-1)
     return resized
 
+
 def index(request):
     context = {}
     if request.method == 'POST':
+        start_time = time.time()
+
         # Retrieve date fields
-        imaging_date_str = request.POST.get('imagingdate', '')  # "YYYY-MM-DD"
-        seeding_date_str = request.POST.get('seedingdate', '')    # "YYYY-MM-DD"
+        imaging_date_str = request.POST.get('imagingdate', '')
+        seeding_date_str = request.POST.get('seedingdate', '')
         imaging_julian = get_julian_day(imaging_date_str)
         seeding_julian = get_julian_day(seeding_date_str)
 
+        # Check if user wants Flowering & Maturity or just Yield
+        # This will be True if the switch is checked
+        predict_fm = 'predict_flowering_maturity' in request.POST
+
         # Get file objects
-        rgb_image_file = request.FILES.get('rgbimage', None)      # TIF
-        nir_image_file = request.FILES.get('nirimage', None)        # TIF
-        lidar_data_file = request.FILES.get('lidardata', None)      # NPY (raw point cloud)
-        weather_data_file = request.FILES.get('weatherdata', None)  # NPY
+        rgb_image_file = request.FILES.get('rgbimage', None)
+        nir_image_file = request.FILES.get('nirimage', None)
+        lidar_data_file = request.FILES.get('lidardata', None)
+        weather_data_file = request.FILES.get('weatherdata', None)
 
         shapes_info = []
 
@@ -143,9 +163,7 @@ def index(request):
         if rgb_image_file:
             rgb_bytes = rgb_image_file.read()
             rgb_array = tifffile.imread(BytesIO(rgb_bytes))
-            #shapes_info.append(f"Original RGB shape: {rgb_array.shape}")
             rgb_processed = image_processing(rgb_array, target_size=(512, 612), is_nir=False)
-            #shapes_info.append(f"Processed RGB shape: {rgb_processed.shape}")
             x_test_rgbimage = np.expand_dims(rgb_processed, axis=0)
         else:
             x_test_rgbimage = None
@@ -154,67 +172,87 @@ def index(request):
         if nir_image_file:
             nir_bytes = nir_image_file.read()
             nir_array = tifffile.imread(BytesIO(nir_bytes))
-            #shapes_info.append(f"Original NIR shape: {nir_array.shape}")
             nir_processed = image_processing(nir_array, target_size=(512, 612), is_nir=True)
-            #shapes_info.append(f"Processed NIR shape: {nir_processed.shape}")
             x_test_nirimage = np.expand_dims(nir_processed, axis=0)
         else:
             x_test_nirimage = None
 
         # Process LiDAR (NPY)
         if lidar_data_file:
-            lidar_array = np.load(BytesIO(np.load(lidar_data_file, allow_pickle=True)))
-            #shapes_info.append(f"LiDAR raw array shape: {lidar_array.shape}")
+            # We assume the user directly uploaded an .npy file with points
+            lidar_array =  np.load(BytesIO(np.load(lidar_data_file, allow_pickle=True)))
             lidar_processed = projection3x(lidar_array)
-            #shapes_info.append(f"Processed LiDAR shape: {lidar_processed.shape}")
             x_test_lidar = np.expand_dims(lidar_processed, axis=0)
         else:
             x_test_lidar = None
 
         # Process Weather (NPY)
         if weather_data_file:
-            weather_array = np.load(BytesIO(np.load(weather_data_file, allow_pickle=True)))
-            #shapes_info.append(f"Weather array shape: {weather_array.shape}")
+            weather_array =  np.load(BytesIO(np.load(weather_data_file, allow_pickle=True)))
             # If needed, transpose weather data to match expected shape
             x_test_weather = np.expand_dims(weather_array, axis=0)
         else:
             x_test_weather = None
 
-        # Prepare additional inputs from date information.
+        # Prepare date inputs
         x_test_imagedate = np.array([imaging_julian]) if imaging_julian is not None else None
         x_test_seedingdate = np.array([seeding_julian]) if seeding_julian is not None else None
 
-        # Construct the input dictionary for prediction.
+        # Construct the input dictionary for the model
         inputs = {}
         if x_test_rgbimage is not None:
             inputs["rgb_image"] = x_test_rgbimage
+            shapes_info.append({'label': "RGB shape:", 'value': x_test_rgbimage.shape})
         if x_test_nirimage is not None:
             inputs["nir_image"] = x_test_nirimage
+            shapes_info.append({'label': "NIR shape:", 'value': x_test_nirimage.shape})
         if x_test_lidar is not None:
             inputs["lidar_data"] = x_test_lidar
+            shapes_info.append({'label': "LiDAR shape:", 'value': x_test_lidar.shape})
+        if x_test_weather is not None:
+            # Example reshape: (batch, height, width, channels)
+            # If your data is already (B,H,W,C) you may not need this transpose
+            inputs["weather_data"] = np.transpose(x_test_weather, (0, 2, 3, 1))
+            shapes_info.append({'label': "Weather shape:", 'value': inputs["weather_data"].shape})
         if x_test_seedingdate is not None:
             inputs["seeding_date"] = x_test_seedingdate
+            shapes_info.append({'label': "Seeding date shape:", 'value': x_test_seedingdate.shape})
         if x_test_imagedate is not None:
             inputs["image_date"] = x_test_imagedate
-        if x_test_weather is not None:
-            inputs["weather_data"] = np.transpose(x_test_weather, (0, 2, 3, 1))
+            shapes_info.append({'label': "Imaging date shape:", 'value': x_test_imagedate.shape})
 
-        # Log input shapes for debugging
-        for key, value in inputs.items():
-            shapes_info.append(f"Input '{key}' shape: {value.shape}")
+        # Decide which model to use
+        if predict_fm:
+            # --------------------------
+            # Use the days_model (flowering + maturity).
+            # Suppose this model is multi‐output:
+            #   y_pred[0] → days_to_flowering
+            #   y_pred[1] → days_to_maturity
+            # each of shape (1,1)
+            # --------------------------
+            y_pred = days_model.predict(inputs)
 
-        # Make prediction
-        y_pred = model.predict(inputs)
+            # For example, we might do:
+            days_to_flowering = y_pred[0][0, 0] * 100
+            days_to_maturity = y_pred[1][0, 0] * 100
 
-        # Extract prediction values:
-        # y_pred[0] -> days to flowering, y_pred[1] -> days to maturity.
-        # Multiply by 100 if needed (adjust as per your scaling)
-        days_to_flowering = y_pred[0][0, 0] * 100
-        days_to_maturity = y_pred[1][0, 0] * 100
+            context['days_to_flowering'] = days_to_flowering
+            context['days_to_maturity'] = days_to_maturity
 
-        # Pass predictions and other context data to the template
-        context['days_to_flowering'] = days_to_flowering
-        context['days_to_maturity'] = days_to_maturity
+        else:
+            # --------------------------
+            # Use the yield_model
+            # Suppose it outputs shape (1,1)
+            # --------------------------
+            y_pred = yield_model.predict(inputs)
+            predicted_yield = y_pred[0, 0] * 1000
+            context['predicted_yield'] = predicted_yield
+
+        # Timing
+        elapsed_time = (time.time() - start_time) * 1000  # ms
+        context['prediction_time'] = f"{elapsed_time:.0f} ms"
+
+        # Add shapes_info for debugging
         context['shapes_info'] = shapes_info
 
     return render(request, 'index.html', context)

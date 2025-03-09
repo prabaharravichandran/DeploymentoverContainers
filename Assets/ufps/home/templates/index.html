@@ -2,30 +2,53 @@
 
 <!doctype html>
 <html lang="en" class="h-100" data-bs-theme="auto">
-  <head><script src="{% static 'assets/dist/js/color-modes.js' %}"></script>
-
+  <head>
+    <script src="{% static 'assets/dist/js/color-modes.js' %}"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.122.0">
     <title>UFPS | DMA</title>
 
     <link rel="icon" type="image/x-icon" href="{% static 'assets/images/favicon.ico' %}">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sticky-footer/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        flatpickr(["#imagingdate", "#harvestdate"], {
+        flatpickr(["#imagingdate", "#seedingdate"], {
           dateFormat: "Y-m-d", // Adjust format as needed
         });
       });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const predictButton = document.querySelector("button[type='submit']");
+
+        if (predictButton) {
+          predictButton.addEventListener("click", function () {
+            sessionStorage.setItem("predictionStartTime", Date.now());
+          });
+        }
+
+        // Check if there's a stored timestamp after the page reloads
+        const startTime = sessionStorage.getItem("predictionStartTime");
+        if (startTime) {
+          const elapsedTime = (Date.now() - parseInt(startTime));
+          sessionStorage.removeItem("predictionStartTime"); // Clear stored time
+
+          const frontendPredictionTimeElement = document.getElementById("frontend-prediction-time");
+          if (frontendPredictionTimeElement) {
+            frontendPredictionTimeElement.innerHTML = `
+              <p style="font-size: 1.5em; margin: 0;">Inference time (frontend)</p>
+              <span style="color: #F80 !important;">${elapsedTime.toFixed(0)} ms</span>
+            `;
+          } else {
+            console.error("Frontend inference time div not found!");
+          }
+        }
+      });
     </script>
 
-    <style>
+        <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -79,20 +102,24 @@
       }
 
       .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+          --bd-orange-bg: #FF8800;
+          --bd-orange-rgb: 255, 136, 0;
 
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+          --bs-btn-font-weight: 600;
+          --bs-btn-color: var(--bs-white);
+          --bs-btn-bg: var(--bd-orange-bg);
+          --bs-btn-border-color: var(--bd-orange-bg);
+          --bs-btn-hover-color: var(--bs-white);
+          /* Darken base color by ~10% for hover */
+          --bs-btn-hover-bg: #E67A00;
+          --bs-btn-hover-border-color: #E67A00;
+          --bs-btn-focus-shadow-rgb: var(--bd-orange-rgb);
+          --bs-btn-active-color: var(--bs-btn-hover-color);
+          /* Darken base color by ~20% for active state */
+          --bs-btn-active-bg: #CC6D00;
+          --bs-btn-active-border-color: #CC6D00;
+      }
+
       }
 
       .bd-mode-toggle {
@@ -111,10 +138,13 @@
         content: "> ";
         color: black; /* You can change the color as needed */
       }
+      .bd-heading.sticky-xl-top {
+        position: sticky;
+        top: -30px;
+        z-index: 1000; /* Ensure it stacks above other elements */
+      }
     </style>
 
-
-    <!-- Custom styles for this template -->
     <link href="{% static 'assets/dist/css/sticky-footer.css' %}" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
@@ -134,8 +164,8 @@
       </symbol>
     </svg>
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+    <div class="dropdown position-fixed top-0 end-0 mb-5 me-3 p-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary btn-sm py-2 dropdown-toggle d-flex align-items-center"
               id="bd-theme"
               type="button"
               aria-expanded="false"
@@ -168,120 +198,146 @@
         </li>
       </ul>
     </div>
+    </head>
 
-
+    <body class="d-flex flex-column h-100">
     <!-- Begin page content -->
     <main class="flex-shrink-0">
       <div class="container-fluid px-5">
-        <h1 class="mt-5">UFPS Data Management and Analysis</h1>
-        <p class="lead">
-        </p>
+        <h1 class="mt-3">UFPS Data Management and Analysis Pipeline</h1>
       </div>
 
-      <!-- Split the next section into two columns -->
-      <section id="forms" class="container-fluid px-lg-5 mt-5">
+      <section class="container-fluid px-lg-5 mt-5">
         <article class="my-3" id="overview">
-          <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-            <h2>Days to Flowering & Maturity Estimation</h2>
-          </div>
-
-          <div class="bd-example-snippet bd-code-snippet">
-            <!-- Row with two columns -->
-            <div class="row">
-              <!-- Left column: Form -->
-              <div class="col-md-4">
-                <h3 style="text-align: left;">File upload for prediction</h3>
-                <form method="post" enctype="multipart/form-data">
-                  {% csrf_token %}
-                  <!-- RGB Image -->
-                  <div class="mb-3 w-50" style="max-width: 300px;">
-                    <label class="form-label" for="rgbimage">RGB Image (.TIF)</label>
-                    <input type="file" class="form-control" id="rgbimage" name="rgbimage" accept=".tif">
-                  </div>
-
-                  <!-- NIR Image -->
-                  <div class="mb-3 w-50" style="max-width: 300px;">
-                    <label class="form-label" for="nirimage">NIR Image (.TIF)</label>
-                    <input type="file" class="form-control" id="nirimage" name="nirimage" accept=".tif">
-                  </div>
-
-                  <!-- LiDAR Data -->
-                  <div class="mb-3 w-50" style="max-width: 300px;">
-                    <label class="form-label" for="lidardata">LiDAR Data (.NPY)</label>
-                    <input type="file" class="form-control" id="lidardata" name="lidardata" accept=".npy">
-                  </div>
-
-                  <!-- Weather Data -->
-                  <div class="mb-3 w-50" style="max-width: 300px;">
-                    <label class="form-label" for="weatherdata">Weather Data (.NPY)</label>
-                    <input type="file" class="form-control" id="weatherdata" name="weatherdata" accept=".npy">
-                  </div>
-
-                  <!-- Imaging Date -->
-                  <div class="mb-3 w-25" style="max-width: 200px;">
-                    <label for="imagingdate" class="form-label">Imaging Date</label>
-                    <input type="date" class="form-control" id="imagingdate" name="imagingdate" placeholder="Select a date">
-                  </div>
-
-                  <!-- Harvest Date (or any other date) -->
-                  <div class="mb-3 w-25" style="max-width: 200px;">
-                    <label for="seedingdate" class="form-label">Seeding Date</label>
-                    <input type="date" class="form-control" id="seedingdate" name="seedingdate" placeholder="Select a date">
-                  </div>
-
-                  <!-- Switch -->
-                  <div class="mb-3 form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                    <label class="form-check-label" for="flexSwitchCheckChecked">
-                      Check to predict both flowering and maturity
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Predict</button>
-                </form>
-              </div> <!-- end col-md-6 (form) -->
-
-                <!-- Middle column: Input Shapes -->
-                <div class="col-md-4">
-                  <h3 style="text-align: left;">Input</h3>
-                  {% if shapes_info %}
-                    <ul class="custom-bullet">
-                      {% for shape_text in shapes_info %}
-                        <li style="font-size: 1em;">{{ shape_text }}</li>
-                      {% endfor %}
-                    </ul>
-                  {% else %}
-                    <p style="text-align: left;">No input shapes available.</p>
-                  {% endif %}
+          <h2 style="color: #F80;">Days to Flowering & Maturity (or Yield) Estimation</h2>
+          <div class="row" style="margin-left: 10px;">
+            <!-- Left column: Form -->
+            <div class="col-md-4">
+              <h3>File upload for prediction</h3>
+              <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <!-- RGB Image -->
+                <div class="mb-3 w-50" style="max-width: 300px;">
+                  <label class="form-label" for="rgbimage">RGB Image (.TIF)</label>
+                  <input type="file" class="form-control" id="rgbimage" name="rgbimage" accept=".tif">
                 </div>
 
-              <!-- Right column: Reserve for output or other content -->
-              <div class="col-md-4">
-                <!-- Output section -->
-                <h3 style="text-align: left;">Output</h3>
-                {% if days_to_flowering and days_to_maturity %}
-                  <p style="text-align: left;">
-                    <p style="font-size: 1.5em; margin: 0;">Days to Flowering</p>
-                    <span style="font-size: 8em;">{{ days_to_flowering|floatformat:"0" }}</span><br>
-                    <p style="font-size: 1.5em; margin: 0;">Days to Maturity</p>
-                    <span style="font-size: 8em;">{{ days_to_maturity|floatformat:"0" }}</span>
+                <!-- NIR Image -->
+                <div class="mb-3 w-50" style="max-width: 300px;">
+                  <label class="form-label" for="nirimage">NIR Image (.TIF)</label>
+                  <input type="file" class="form-control" id="nirimage" name="nirimage" accept=".tif">
+                </div>
+
+                <!-- LiDAR Data -->
+                <div class="mb-3 w-50" style="max-width: 300px;">
+                  <label class="form-label" for="lidardata">LiDAR Data (.NPY)</label>
+                  <input type="file" class="form-control" id="lidardata" name="lidardata" accept=".npy">
+                </div>
+
+                <!-- Weather Data -->
+                <div class="mb-3 w-50" style="max-width: 300px;">
+                  <label class="form-label" for="weatherdata">Weather Data (.NPY)</label>
+                  <input type="file" class="form-control" id="weatherdata" name="weatherdata" accept=".npy">
+                </div>
+
+                <!-- Imaging Date -->
+                <div class="mb-3 w-30" style="max-width: 200px;">
+                  <label for="imagingdate" class="form-label">Imaging Date</label>
+                  <input type="date" class="form-control" id="imagingdate" name="imagingdate">
+                </div>
+
+                <!-- Seeding Date -->
+                <div class="mb-3 w-30" style="max-width: 200px;">
+                  <label for="seedingdate" class="form-label">Seeding Date</label>
+                  <input type="date" class="form-control" id="seedingdate" name="seedingdate">
+                </div>
+
+                <!-- Switch: If checked -> Flowering & Maturity, else -> Yield -->
+                <div class="mb-3 form-check form-switch">
+                  <!-- IMPORTANT: add a name attribute so Django sees this in request.POST -->
+                  <input class="form-check-input" type="checkbox" role="switch"
+                         id="flexSwitchCheckChecked" name="predict_flowering_maturity" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">
+                    Flowering & Maturity? Uncheck for Yield
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Predict</button>
+              </form>
+            </div>
+
+            <!-- Middle column: Input shapes debug -->
+            <div class="col-md-4">
+              <h3>Input</h3>
+              {% if shapes_info %}
+                {% for shape in shapes_info %}
+                  <p style="font-size:1em;">
+                    {{ shape.label }}<br>
+                    <span style="margin-left:1em;">{{ shape.value }}</span>
                   </p>
-                {% else %}
-                  <p style="text-align: left;">No predictions available yet.</p>
-                {% endif %}
+                {% endfor %}
+              {% else %}
+                <p>No input shapes available.</p>
+              {% endif %}
+            </div>
+
+            <!-- Right column: Output -->
+            <div class="col-md-4">
+              <h3>Output</h3>
+
+              {% if days_to_flowering and days_to_maturity %}
+                <!-- Show Flowering & Maturity -->
+                <p style="font-size: 1.5em; margin: 0;">Days to Flowering</p>
+                <span style="font-size: 8em; color: #F80;">
+                  {{ days_to_flowering|floatformat:"0" }}
+                  <span style="font-size: 0.25em"> days</span>
+                </span><br>
+                <p style="font-size: 1.5em; margin: 0;">Days to Maturity</p>
+                <span style="font-size: 8em; color: #F80;">
+                  {{ days_to_maturity|floatformat:"0" }}
+                  <span style="font-size: 0.25em"> days</span>
+                </span>
+
+              {% elif predicted_yield %}
+                <!-- Show Yield -->
+                <p style="font-size: 1.5em; margin: 0;">Predicted Yield</p>
+                <span style="font-size: 8em; color: #F80;">
+                  {{ predicted_yield|floatformat:"0" }}
+                  <span style="font-size: 0.25em"> kg/ha</span>
+                </span>
+
+              {% else %}
+                <p>No predictions available yet.</p>
+              {% endif %}
+
+              <!-- Backend inference time -->
+              {% if prediction_time %}
+                <p style="font-size: 1.5em; margin: 0;">Inference time (backend)</p>
+                <span style="color: #F80 !important;">{{ prediction_time }}</span>
+              {% endif %}
+
+              <!-- Frontend inference time -->
+              <div id="frontend-prediction-time">
+                <!-- Will be updated by JavaScript after page reload -->
               </div>
-            </div> <!-- end row -->
+            </div>
           </div>
         </article>
       </section>
     </main>
 
     <footer class="footer mt-auto py-3 bg-body-tertiary">
-      <div class="container-fluid px-5">
-        <span class="text-body-secondary">&copy; 2025 Prabahar Ravichandran</span>
+      <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
+        <span class="text-body-secondary" style="color: #F80 !important;">
+          ©2025 Agriculture and Agri-Food Canada
+        </span>
+        <!-- Right-corner text -->
+        <span class="text-body-secondary">
+          PRsIE-runtime1.0
+        </span>
       </div>
     </footer>
-    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-    </body>
+
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
 </html>
