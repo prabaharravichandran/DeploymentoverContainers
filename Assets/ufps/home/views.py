@@ -1,3 +1,10 @@
+import os
+# Disable GPU detection
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
+# Mute most logs (0 = all logs shown, 1 = filter INFO, 2 = filter WARNING, 3 = filter ERROR)
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+
 import time
 import numpy as np
 import cv2
@@ -8,18 +15,25 @@ from sklearn.decomposition import PCA
 import tifffile
 import tensorflow as tf
 
-# -------------------------------------------------------------------------
-# 1) Load both models, giving them separate names
-# -------------------------------------------------------------------------
-days_model = tf.keras.models.load_model(
-    "/home/ufps/static/assets/models/maturity.h5",
-    custom_objects={"mse": tf.keras.losses.MeanSquaredError()}
-)
+days_model = None
+yield_model = None
 
-yield_model = tf.keras.models.load_model(
-    "/home/ufps/static/assets/models/yield.h5",
-    custom_objects={"mse": tf.keras.losses.MeanSquaredError()}
-)
+def _lazy_load_models():
+    """
+    Helper that loads the models only once.
+    """
+    global days_model, yield_model
+
+    if days_model is None:
+        days_model = tf.keras.models.load_model(
+            "/home/ufps/static/assets/models/maturity.h5",
+            custom_objects={"mse": tf.keras.losses.MeanSquaredError()},
+        )
+    if yield_model is None:
+        yield_model = tf.keras.models.load_model(
+            "/home/ufps/static/assets/models/yield.h5",
+            custom_objects={"mse": tf.keras.losses.MeanSquaredError()},
+        )
 
 
 def get_julian_day(date_str):
@@ -137,7 +151,13 @@ def image_processing(image_array, target_size=(512, 612), is_nir=False):
 
 
 def index(request):
+    global days_model, yield_model
+
+    # Only load models here, if/when index is actually called
+    _lazy_load_models()
+
     context = {}
+
     if request.method == 'POST':
         start_time = time.time()
 
@@ -256,3 +276,6 @@ def index(request):
         context['shapes_info'] = shapes_info
 
     return render(request, 'index.html', context)
+
+def home(request):
+    return render(request, 'home.html')
