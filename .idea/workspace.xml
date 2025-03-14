@@ -4,8 +4,648 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76a7a757-df09-4bc7-bb8c-53bda6e568b1" name="Changes" comment="Home application to server static files">
+    <list default="true" id="76a7a757-df09-4bc7-bb8c-53bda6e568b1" name="Changes" comment="Updated README.md">
+      <change afterPath="$PROJECT_DIR$/Assets/make.sbatch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/css/sidebars.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps/static/assets/dist/js/sidebars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ufps_sandbox/home/ufps/staticfiles/assets/dist/js/color-modes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/home/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/home/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/home/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/home/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/home/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/home/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/home/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/home/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/home/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/css/sidebars.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/css/sticky-footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/js/color-modes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/dist/js/sidebars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/images/about.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/images/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/images/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/images/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/images/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/images/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/images/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/models/flowering.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/models/maturity.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/static/assets/models/yield.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/autocomplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/autocomplete.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/autocomplete.d24f10bdee41.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/autocomplete.d24f10bdee41.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/base.08e8df8c3104.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/base.08e8df8c3104.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/base.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/changelists.59465e72d1ef.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/changelists.59465e72d1ef.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/changelists.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/changelists.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/dark_mode.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/dark_mode.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/dark_mode.f9ffd47267af.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/dark_mode.f9ffd47267af.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/dashboard.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/dashboard.e90f2068217b.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/dashboard.e90f2068217b.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/forms.86203f0362cc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/forms.86203f0362cc.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/forms.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/login.a3b47c458e5d.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/login.a3b47c458e5d.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/login.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/nav_sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/nav_sidebar.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/nav_sidebar.dd925738f4cc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/nav_sidebar.dd925738f4cc.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/responsive.ae7b57af01c8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/responsive.ae7b57af01c8.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/responsive.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/responsive_rtl.a154194876ee.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/responsive_rtl.a154194876ee.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/responsive_rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/responsive_rtl.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/rtl.7e532512b807.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/rtl.7e532512b807.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/rtl.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/unusable_password_field.b433f2a95fba.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/unusable_password_field.b433f2a95fba.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/unusable_password_field.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/unusable_password_field.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.f94142512c91.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.f94142512c91.md.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.md.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/select2.a2194c262648.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/select2.a2194c262648.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/select2.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/select2.min.9f54e6414f87.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/select2.min.9f54e6414f87.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/vendor/select2/select2.min.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/widgets.355d088349f3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/widgets.355d088349f3.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/widgets.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/css/widgets.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/LICENSE.2c54f4e1ca1c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/LICENSE.2c54f4e1ca1c.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/LICENSE.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/README.9849248c9207.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/README.9849248c9207.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/README.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/calendar-icons.93ab098d1ac1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/calendar-icons.93ab098d1ac1.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/calendar-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/calendar-icons.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/gis/move_vertex_off.7a23bf31ef8a.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/gis/move_vertex_off.7a23bf31ef8a.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/gis/move_vertex_off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/gis/move_vertex_off.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/gis/move_vertex_on.0047eba25b67.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/gis/move_vertex_on.0047eba25b67.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/gis/move_vertex_on.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/gis/move_vertex_on.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-addlink.073aeb1feda7.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-addlink.073aeb1feda7.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-addlink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-addlink.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-alert.034cc7d8a67f.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-alert.034cc7d8a67f.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-alert.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-alert.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-calendar.ac7aea671bea.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-calendar.ac7aea671bea.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-calendar.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-changelink.7eddb320e61f.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-changelink.7eddb320e61f.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-changelink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-changelink.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-clock.e1d4dfac3f2b.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-clock.e1d4dfac3f2b.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-clock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-clock.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-deletelink.564ef9dc3854.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-deletelink.564ef9dc3854.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-deletelink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-deletelink.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-hidelink.8d245a995e18.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-hidelink.8d245a995e18.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-hidelink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-hidelink.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-no.439e821418cd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-no.439e821418cd.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-no.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-no.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-unknown-alt.81536e128bb6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-unknown-alt.81536e128bb6.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-unknown-alt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-unknown-alt.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-unknown.a18cb4398978.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-unknown.a18cb4398978.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-unknown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-unknown.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-viewlink.41eb31f7826e.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-viewlink.41eb31f7826e.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-viewlink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-viewlink.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-yes.d2f9f035226a.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-yes.d2f9f035226a.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-yes.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/icon-yes.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/inline-delete.fec1b761f254.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/inline-delete.fec1b761f254.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/inline-delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/inline-delete.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/search.7cf54ff789c6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/search.7cf54ff789c6.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/search.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/selector-icons.b4555096cea2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/selector-icons.b4555096cea2.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/selector-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/selector-icons.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/sorting-icons.3a097b59f104.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/sorting-icons.3a097b59f104.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/sorting-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/sorting-icons.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/tooltag-add.e59d620a9742.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/tooltag-add.e59d620a9742.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/tooltag-add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/tooltag-add.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/tooltag-arrowright.bbfb788a849e.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/tooltag-arrowright.bbfb788a849e.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/tooltag-arrowright.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/img/tooltag-arrowright.svg.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/SelectBox.7d3ce5a98007.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/SelectBox.7d3ce5a98007.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/SelectBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/SelectBox.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/SelectFilter2.b20260d34877.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/SelectFilter2.b20260d34877.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/SelectFilter2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/SelectFilter2.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/actions.f1d5653edb59.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/actions.f1d5653edb59.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/actions.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/admin/DateTimeShortcuts.9f6e209cebca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/admin/DateTimeShortcuts.9f6e209cebca.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/admin/DateTimeShortcuts.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/admin/RelatedObjectLookups.874743a87811.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/admin/RelatedObjectLookups.874743a87811.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/admin/RelatedObjectLookups.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/autocomplete.01591ab27be7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/autocomplete.01591ab27be7.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/autocomplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/autocomplete.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/calendar.d64496bbf46d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/calendar.d64496bbf46d.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/calendar.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/cancel.ecc4c5ca7b32.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/cancel.ecc4c5ca7b32.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/cancel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/cancel.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/change_form.9d8ca4f96b75.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/change_form.9d8ca4f96b75.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/change_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/change_form.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/core.7e257fdf56dc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/core.7e257fdf56dc.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/core.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/filters.0e360b7a9f80.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/filters.0e360b7a9f80.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/filters.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/inlines.22d4d93c00b4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/inlines.22d4d93c00b4.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/inlines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/inlines.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/jquery.init.b7781a0897fc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/jquery.init.b7781a0897fc.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/jquery.init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/jquery.init.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/nav_sidebar.3b9190d420b1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/nav_sidebar.3b9190d420b1.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/nav_sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/nav_sidebar.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/popup_response.96190d343c22.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/popup_response.96190d343c22.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/popup_response.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/popup_response.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/prepopulate.bd2361dfd64d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/prepopulate.bd2361dfd64d.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/prepopulate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/prepopulate.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/prepopulate_init.6cac7f3105b8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/prepopulate_init.6cac7f3105b8.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/prepopulate_init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/prepopulate_init.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/theme.91cf832f559e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/theme.91cf832f559e.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/theme.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/unusable_password_field.017ea86b6ae4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/unusable_password_field.017ea86b6ae4.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/unusable_password_field.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/unusable_password_field.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/urlify.ae970a820212.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/urlify.ae970a820212.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/urlify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/urlify.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/LICENSE.de877aa6d744.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/LICENSE.de877aa6d744.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/LICENSE.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/jquery.12e87d2f3a4c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/jquery.12e87d2f3a4c.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/jquery.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/jquery.min.2c872dbe60f4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/jquery.min.2c872dbe60f4.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/jquery/jquery.min.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/LICENSE.f94142512c91.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/LICENSE.f94142512c91.md.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/LICENSE.md.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/af.4f6fcd73488c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/af.4f6fcd73488c.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/af.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ar.65aa8e36bf5d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ar.65aa8e36bf5d.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ar.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/az.270c257daf81.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/az.270c257daf81.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/az.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bg.39b8be30d4f0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bg.39b8be30d4f0.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bg.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bn.6d42b4dd5665.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bn.6d42b4dd5665.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bn.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bs.91624382358e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bs.91624382358e.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/bs.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ca.a166b745933a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ca.a166b745933a.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ca.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/cs.4f43e8e7d33a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/cs.4f43e8e7d33a.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/cs.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/da.766346afe4dd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/da.766346afe4dd.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/da.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/de.8a1c222b0204.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/de.8a1c222b0204.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/de.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/dsb.56372c92d2f1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/dsb.56372c92d2f1.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/dsb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/dsb.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/el.27097f071856.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/el.27097f071856.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/el.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/en.cf932ba09a98.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/en.cf932ba09a98.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/en.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/es.66dbc2652fb1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/es.66dbc2652fb1.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/es.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/et.2b96fd98289d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/et.2b96fd98289d.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/et.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/eu.adfe5c97b72c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/eu.adfe5c97b72c.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/eu.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fa.3b5bd1961cfd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fa.3b5bd1961cfd.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fa.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fi.614ec42aa9ba.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fi.614ec42aa9ba.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fi.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fr.05e0542fcfe6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fr.05e0542fcfe6.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/fr.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/gl.d99b1fedaa86.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/gl.d99b1fedaa86.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/gl.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/he.e420ff6cd3ed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/he.e420ff6cd3ed.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/he.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hi.70640d41628f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hi.70640d41628f.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hi.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hr.a2b092cc1147.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hr.a2b092cc1147.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hr.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hsb.fa3b55265efe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hsb.fa3b55265efe.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hsb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hsb.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hu.6ec6039cb8a3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hu.6ec6039cb8a3.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hu.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hy.c7babaeef5a6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hy.c7babaeef5a6.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/hy.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/id.04debded514d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/id.04debded514d.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/id.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/is.3ddd9a6a97e9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/is.3ddd9a6a97e9.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/is.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/it.be4fe8d365b5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/it.be4fe8d365b5.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/it.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ja.170ae885d74f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ja.170ae885d74f.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ja.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ka.2083264a54f0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ka.2083264a54f0.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ka.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/km.c23089cb06ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/km.c23089cb06ca.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/km.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ko.e7be6c20e673.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ko.e7be6c20e673.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ko.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/lt.23c7ce903300.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/lt.23c7ce903300.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/lt.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/lv.08e62128eac1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/lv.08e62128eac1.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/lv.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/mk.dabbb9087130.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/mk.dabbb9087130.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/mk.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ms.4ba82c9a51ce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ms.4ba82c9a51ce.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ms.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/nb.da2fce143f27.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/nb.da2fce143f27.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/nb.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ne.3d79fd3f08db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ne.3d79fd3f08db.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ne.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ne.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/nl.997868a37ed8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/nl.997868a37ed8.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/nl.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pl.6031b4f16452.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pl.6031b4f16452.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pl.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ps.38dfa47af9e0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ps.38dfa47af9e0.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ps.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pt-BR.e1b294433e7f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pt-BR.e1b294433e7f.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pt-BR.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pt.33b4a3b44d43.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pt.33b4a3b44d43.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/pt.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ro.f75cb460ec3b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ro.f75cb460ec3b.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ro.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ru.934aa95f5b5f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ru.934aa95f5b5f.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/ru.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sk.33d02cef8d11.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sk.33d02cef8d11.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sk.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sl.131a78bc0752.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sl.131a78bc0752.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sl.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sq.5636b60d29c9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sq.5636b60d29c9.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sq.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sr-Cyrl.f254bb8c4c7c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sr-Cyrl.f254bb8c4c7c.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sr-Cyrl.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sr.5ed85a48f483.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sr.5ed85a48f483.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sr.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sv.7a9c2f71e777.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sv.7a9c2f71e777.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/sv.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/th.f38c20b0221b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/th.f38c20b0221b.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/th.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/tk.7c572a68c78f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/tk.7c572a68c78f.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/tk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/tk.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/tr.b5a0643d1545.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/tr.b5a0643d1545.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/tr.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/uk.8cede7f4803c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/uk.8cede7f4803c.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/uk.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/vi.097a5b75b3e1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/vi.097a5b75b3e1.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/vi.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/zh-CN.2cff662ec5f9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/zh-CN.2cff662ec5f9.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/zh-CN.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/zh-TW.04554a227c2b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/zh-TW.04554a227c2b.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/i18n/zh-TW.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/select2.full.c2afdeda3058.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/select2.full.c2afdeda3058.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/select2.full.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/select2.full.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/select2.full.min.fcd7500d8e13.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/select2.full.min.fcd7500d8e13.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/select2.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/select2/select2.full.min.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/LICENSE.b6fd2ceea8d3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/LICENSE.b6fd2ceea8d3.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/LICENSE.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/xregexp.a7e08b0ce686.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/xregexp.a7e08b0ce686.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/xregexp.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/xregexp.min.f1ae4617847c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/xregexp.min.f1ae4617847c.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/admin/js/vendor/xregexp/xregexp.min.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/brand/Yield.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/brand/bootstrap-logo-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/brand/bootstrap-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.min.css.f12f498b6e53.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.min.css.f12f498b6e53.map.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.min.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.min.css.map.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.min.edf0779261db.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.min.edf0779261db.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.rtl.min.0a633242e3bd.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.rtl.min.0a633242e3bd.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.rtl.min.css.badcc2667b65.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.rtl.min.css.badcc2667b65.map.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.rtl.min.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/bootstrap.rtl.min.css.map.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/sidebars.77e3c7477428.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/sidebars.77e3c7477428.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/sidebars.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/sidebars.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/sticky-footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/sticky-footer.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/sticky-footer.f904a2a80f7b.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/css/sticky-footer.f904a2a80f7b.css.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/bootstrap.bundle.min.1994b024f8ad.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/bootstrap.bundle.min.1994b024f8ad.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/bootstrap.bundle.min.js.98d27f96e93b.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/bootstrap.bundle.min.js.98d27f96e93b.map.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/bootstrap.bundle.min.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/bootstrap.bundle.min.js.map.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/color-modes.1ed61913c8ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/color-modes.1ed61913c8ca.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/color-modes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/color-modes.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/sidebars.5ac4ddc8c103.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/sidebars.5ac4ddc8c103.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/sidebars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/dist/js/sidebars.js.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/about.f51a72190681.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/about.f51a72190681.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/about.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/about.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/android-chrome-192x192.81d6fda94710.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/android-chrome-512x512.567ecb6354b8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/apple-touch-icon.c8d902d758e4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/favicon-16x16.a26e596dbd33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/favicon-32x32.146a99b15fcc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/favicon.fae72a8554ff.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/favicon.fae72a8554ff.ico.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/favicon.ico.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/site.053100cb84a5.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/site.053100cb84a5.webmanifest.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/images/site.webmanifest.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/flowering.fa33fa2b5e0f.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/flowering.fa33fa2b5e0f.h5.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/flowering.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/flowering.h5.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/maturity.b8114221e7cb.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/maturity.b8114221e7cb.h5.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/maturity.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/maturity.h5.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/yield.25a4b723e1e8.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/yield.25a4b723e1e8.h5.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/yield.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/assets/models/yield.h5.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/staticfiles/staticfiles.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/ufps/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/ufps/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/ufps/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/ufps/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/InferenceEngine/Docker/ufps/ufps/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DeploymentoverContainers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeploymentoverContainers.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AWS/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AWS/singularity.def" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ufps.def" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ufps/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ufps/home/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ufps/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ufps/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ufps/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ufps/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ufps/ufps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ufps/ufps/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ufps/ufps/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ufps/ufps/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,20 +653,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "prabaharravichandran"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;prabaharravichandran&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/prabaharravichandran/DeploymentoverContainers.git",
-    "accountId": "d3b92e4f-6bb4-4efd-982f-cb488b49f865"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/prabaharravichandran/DeploymentoverContainers.git&quot;,
+    &quot;accountId&quot;: &quot;d3b92e4f-6bb4-4efd-982f-cb488b49f865&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -36,27 +679,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/AWS/AWS_apptainer/home",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "web.server",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/AWS/AWS_apptainer/home" />
-      <recent name="$PROJECT_DIR$/AWS" />
+      <recent name="$PROJECT_DIR$/Assets" />
+      <recent name="$PROJECT_DIR$/Images/InferenceEngine/Docker" />
+      <recent name="$PROJECT_DIR$/Assets/ufps_sandbox/home/ufps/staticfiles/assets/dist/js" />
+      <recent name="$PROJECT_DIR$/Assets/ufps/static/assets/dist/css" />
+      <recent name="$PROJECT_DIR$/Assets/ufps/static/assets/dist/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Assets/ufps" />
+      <recent name="$PROJECT_DIR$/Assets" />
       <recent name="$PROJECT_DIR$/Assets/ufps/static/assets/dist/js" />
     </key>
   </component>
@@ -80,6 +728,12 @@
       <workItem from="1740591466331" duration="4131000" />
       <workItem from="1740595917417" duration="587000" />
       <workItem from="1740629375795" duration="7103000" />
+      <workItem from="1741643803264" duration="30387000" />
+      <workItem from="1741866085936" duration="3909000" />
+      <workItem from="1741893727841" duration="971000" />
+      <workItem from="1741895840584" duration="9786000" />
+      <workItem from="1741919202142" duration="188000" />
+      <workItem from="1741919455555" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="AWS Setups">
       <option name="closed" value="true" />
@@ -97,15 +751,82 @@
       <option name="project" value="LOCAL" />
       <updated>1740676398400</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Working Inference Engine predicting yield, days to flowering and maturity">
+      <option name="closed" value="true" />
+      <created>1741552690408</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741552690408</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updated README.md">
+      <option name="closed" value="true" />
+      <created>1741553590943</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741553590943</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AWS Setups" />
     <MESSAGE value="Home application to server static files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Home application to server static files" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Working Inference Engine predicting yield, days to flowering and maturity" />
+    <MESSAGE value="Updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
   </component>
 </project>

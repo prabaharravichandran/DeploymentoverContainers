@@ -11,30 +11,28 @@
     <link rel="icon" type="image/x-icon" href="{% static 'assets/images/favicon.ico' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         flatpickr(["#imagingdate", "#seedingdate"], {
-          dateFormat: "Y-m-d", // Adjust format as needed
+          dateFormat: "Y-m-d",
         });
       });
 
       document.addEventListener("DOMContentLoaded", function () {
         const predictButton = document.querySelector("button[type='submit']");
-
         if (predictButton) {
           predictButton.addEventListener("click", function () {
             sessionStorage.setItem("predictionStartTime", Date.now());
           });
         }
-
-        // Check if there's a stored timestamp after the page reloads
         const startTime = sessionStorage.getItem("predictionStartTime");
         if (startTime) {
           const elapsedTime = (Date.now() - parseInt(startTime));
-          sessionStorage.removeItem("predictionStartTime"); // Clear stored time
-
+          sessionStorage.removeItem("predictionStartTime");
           const frontendPredictionTimeElement = document.getElementById("frontend-prediction-time");
           if (frontendPredictionTimeElement) {
             frontendPredictionTimeElement.innerHTML = `
@@ -48,7 +46,7 @@
       });
     </script>
 
-        <style>
+    <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -56,13 +54,11 @@
         -moz-user-select: none;
         user-select: none;
       }
-
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
-
       .b-example-divider {
         width: 100%;
         height: 3rem;
@@ -71,25 +67,17 @@
         border-width: 1px 0;
         box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
       }
-
       .b-example-vr {
         flex-shrink: 0;
         width: 1.5rem;
         height: 100vh;
       }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
       .nav-scroller {
         position: relative;
         z-index: 2;
         height: 2.75rem;
         overflow-y: hidden;
       }
-
       .nav-scroller .nav {
         display: flex;
         flex-wrap: nowrap;
@@ -100,11 +88,9 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-
       .btn-bd-primary {
           --bd-orange-bg: #FF8800;
           --bd-orange-rgb: 255, 136, 0;
-
           --bs-btn-font-weight: 600;
           --bs-btn-color: var(--bs-white);
           --bs-btn-bg: var(--bd-orange-bg);
@@ -119,53 +105,121 @@
           --bs-btn-active-bg: #CC6D00;
           --bs-btn-active-border-color: #CC6D00;
       }
-
-      }
-
       .bd-mode-toggle {
         z-index: 1500;
       }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-
-        ul.custom-bullet {
+      ul.custom-bullet {
         list-style-type: none;
         padding-left: 0;
       }
       ul.custom-bullet li::before {
         content: "> ";
-        color: black; /* You can change the color as needed */
+        color: black;
       }
       .bd-heading.sticky-xl-top {
         position: sticky;
         top: -30px;
-        z-index: 1000; /* Ensure it stacks above other elements */
+        z-index: 1000;
+      }
+      body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      .main-content {
+        flex: 1;
+        display: flex;
+      }
+      .sidebar {
+        min-height: 100vh; /* Sidebar flush to the side with full height */
+      }
+      footer {
+        margin-top: auto; /* Push footer to the bottom */
+      }
+      .sidebar .nav-link img.icon {
+        width: 24px;
+        height: 24px;
+        color: orange;
+      }
+      .sidebar .nav-link.active img.icon {
+        color: white;
+      }
+      .sidebar .icon {
+        width: 40px;
+        height: 40px;
+        color: orange;
       }
     </style>
 
     <link href="{% static 'assets/dist/css/sticky-footer.css' %}" rel="stylesheet">
   </head>
-  <body class="d-flex flex-column h-100">
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-      </symbol>
-    </svg>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Dropdown for theme toggle -->
+    <!-- Include Bootstrap icons definitions (usually in your HTML body or head) -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+          <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+          </symbol>
+          <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+          </symbol>
+          <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+          </symbol>
+          <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+          </symbol>
+          <symbol id="brand" viewBox="0 0 355.7 334.8">
+            <path d="M278.5,0c9.6,1.9,15.9,8.6,17,18.4s.7,20.1.5,29.7.2,11.5-.7,16.1-5.3,3.5-6.8.4-.8-3.6-.8-4.9c-.8-13.6,2.5-29.9.2-42.9s-18.4-10.1-27.4-10.5c-41.3-1.7-82.6,1.7-124,.9-9.6-.2-19.9-1.8-23.3,9.8-.3,20.7.4,41.4-.3,62.1-2.6,4.1-6.8,2.8-7.2-2.1-.7-8.5,0-17.7.2-26.2s.8-22.9.7-34.3-.2-2.5.8-4.9c2.6-5.9,9-10.8,15.5-11.5h155.7Z"/>
+            <g>
+              <path d="M108.1,250.6c4-.8,4.5,1.8,4.9,4.9,2,17.8-1.9,37.1-.7,55.2s.8,11.3,6.4,14.7,10.1,2.1,16.3,2c42.4-1.2,84.6,2.8,126.9,1s20.8.7,24.9-7,1.6-20,1.4-26.2c-.3-7.1-1.6-16.3-.1-23.2,1.3-5.7,6.6-5.9,7.6.4,1.4,9.3.7,21.2.5,30.7-.4,14.5-.1,28.1-17.6,31.6H123.4c-10-1.4-16.5-7.8-17.6-17.9-2-19.1.5-39.3.2-58.6s-1.3-6.8,2.1-7.5Z"/>
+              <path d="M234,222.6c9.6-.7,19.2.8,28.8.5,9.7,9.8,19.2,19.9,29.2,29.4,8.2,0,16.5,0,24.7.2.3,0,1.5-4.1,1.9-4.9,9.4-19.5,42-9.8,36.1,14-4.4,17.6-30,19.1-36.5,2.7-.4-1.1-.8-3.1-1.1-3.9s-.3-.4-.5-.4l-24.2.2-3.9-.9-28.4-29.7c-8.8-1.9-18.3.7-27.2,0s-5.1-.9-4.7-4.2,3.9-3,6-3.2ZM348.1,256.7c0-6.8-5.5-12.2-12.2-12.2s-12.2,5.5-12.2,12.2,5.5,12.2,12.2,12.2,12.2-5.5,12.2-12.2Z"/>
+            </g>
+            <path d="M301.2,82.1h-22.5c0-.1-29.4,46.3-29.4,46.3-.5.4-2.4.6-3.1.7-2.7.3-6.2.4-8.9.3s-6.3-.4-8-1.1-1-5.3.6-5.9,2.6-.5,3.1-.5c1.8,0,4.2.5,6,.5s5.4.2,6.5-.8l29.1-46.7,26.6-.8c2-12.8,16.2-18.4,27.6-13.8s14.2,29.3-.7,35.3c-11.5,4.7-24-1.7-26.9-13.6ZM332.6,77.9c0-6.7-5.5-12.2-12.2-12.2s-12.2,5.5-12.2,12.2,5.5,12.2,12.2,12.2,12.2-5.5,12.2-12.2Z"/>
+            <g>
+              <path d="M348.2,129.4c9.4,9.4,7,24.3-4.5,30.8-11.1,6.3-23.3.7-27.7-10.7l-24.7,13.2c-1.4.3-3-.2-4.3-.2-14.1-.3-28.2,1.2-42.2,1s-12.3.3-15-1.6-2.3-3.5-.6-5.1,7.8-1.8,10.5-1.9c17.2-.9,34.5,2,51.8.2,7.9-4.1,15.5-8.7,23.1-13.4,1.5-2.1,1.7-4.8,2.7-7.1,5.3-12,21.9-14,30.9-5ZM346.7,143.3c0-6.7-5.5-12.2-12.2-12.2s-12.2,5.5-12.2,12.2,5.5,12.2,12.2,12.2,12.2-5.5,12.2-12.2Z"/>
+              <path d="M271.2,198.3l-39.2-.3c-2.8-.4-5.2-3.1-3.1-5.8s5.6-2,7.7-2.2c11.4-.6,22.9,1.5,34.3.5,2.6-10.5,12.7-15.5,22.8-11.8s10.3,7.8,10.7,14.3c1.1,20.8-28.6,25-33.1,5.2ZM297,194.3c0-5.4-4.3-9.7-9.7-9.7s-9.7,4.3-9.7,9.7,4.3,9.7,9.7,9.7,9.7-4.3,9.7-9.7Z"/>
+            </g>
+            <ellipse cx="200.4" cy="39.3" rx="7.5" ry="7.5"/>
+            <path d="M119.7,90.7h42.8c23.1.9,44.6,7.8,47.4,34,2.1,19.9-5.1,34.3-23.3,42.6-1.6.7-3.3,1.2-4.9,1.9s-.4-.1-.3.4l38.9,64h-19.4l-34.9-59.5h-29.4v59.5h-16.8V90.7ZM136.5,159.8c17.2-.9,45.4,4.8,54-15,3.1-7.1,3.3-18.4.2-25.5-5.2-12.3-20.1-13.6-31.8-14.2h-22.4v54.7Z"/>
+            <path d="M36.5,175.4v56.2h-16.8V88.8l45.9.2c18.9,1.4,36.9,7.7,42.7,27.6s1.1,35-11.1,46-40,12.8-60.7,12.8ZM36.5,161c14.7-.4,32.5,1.9,45.5-6.2,13.9-8.7,14.8-34.3,2.4-44.4s-33.1-6.5-47.8-7.2v57.8Z"/>
+          </symbol>
+          <symbol id="yield-icon" viewBox="0 0 414.8 405.8">
+            <path d="M133.1,20.4c13.2-.9,26,1.9,38.1,7.1s22.3,13.5,29.8,13.7,22.7-10.3,30.6-13.7c38.7-16.8,81-2,107.6,28.9,4.3,5.1,9,9.8,3.4,16.2-15.6,12.7-29.4,28.6-44.6,41.5s-5.6,4.9-8.8,5.4H113.6c-3.4-.6-6.9-3.9-9.5-6.2-15-13-28.5-28.1-43.8-40.8-5.3-6.1-1.5-10.4,2.7-15.4,16.9-20.2,43.6-35.1,70.2-36.9Z"/>
+            <path d="M108.4,131.9l184-.2c4.2,0,8.6,4.3,11.6,7.1,34.1,32.6,58.2,86,60.7,133.2,2.5,48.5-3.5,103.9-63.3,107.5H100.7c-59.1-3.8-65-59.5-62.5-107.5s25.8-99.2,58.8-131.4,8.9-8.3,11.4-8.8ZM267.6,158c-1.8,0-24.1,22.1-26.6,25-14.4,17.4,3.8,35.6,18,20.2s8-22.6,8.9-31.6c.2-1.9,1.9-13.8-.3-13.7ZM211.5,172.2c-1.2.3-6.2,20.3-6.8,23.2-1.8,8.5-4.4,18,3,24.7s19.9.7,21.7-9.7-4.6-18.2-8.5-25.3-5.5-10.4-7.2-12.2-1.3-1-2.2-.7ZM189.8,205.1c-1.3.3-7.1,15.9-7.9,18.3-1.6,4.7-4.2,10.9-4.5,15.7-1.7,23.7,26.1,21.2,27,1.5.3-6.4-8.9-28.1-12.6-33.8s-.9-2-2-1.7ZM237.7,209.2c-1.2,0-2.5.8-3.4,1.6-3.8,3.4-10.1,14.9-13.9,19.8-25.7,33.6-61.6,70-98.6,90.8-2.6,1.4-13.8,6.1-14.7,7-2.1,2-.5,6.6,2.6,6.8s20.6-10,25-12.8c36.9-23.2,71.3-57.4,96.5-92.9,1.9-2.6,9.1-12.1,9.7-14.3s-.3-5.7-3.2-5.9ZM257.2,215.6c-8.3,1-15.2,2.5-20,9.9-8.4,13.1,4,24.5,17.6,19.1s16.9-12.4,21.5-16.6,9.4-8.8,10.1-10.1.1-1.4-.8-2.3h-28.4ZM164.3,235.1c-1.8.4-15.6,30.3-16,33.4-2.3,16.4,15.4,24.6,24.5,10.3,5.6-8.8-1.4-31.3-5.7-40.4s-1.4-3.6-2.7-3.2ZM259.8,256l-31-3c-12.4-2.4-30,12.9-20.3,24.8s29.6-3,38.8-9.9,9.8-6.9,11.4-8.8,1.3-1.6,1.1-3ZM135.9,262.1c-1.3.4-13.4,19.1-15,21.7s-4.3,6.8-4.7,9.5c-2,11.4,5.4,21.8,17.4,16.7,13-5.6,9.5-22.6,7.5-33.7s-1.7-10.8-2.8-12.9-1-1.7-2.4-1.2ZM228.3,293.5c-14.4-1.7-39.4-12.9-50.9-.4s-2.1,23.7,11.4,22.7,17.7-6.9,23.6-10.2,13.2-7.3,14.9-9.1,1.4-1.5,1.1-3ZM192.4,330.1c0-.8.2-1.5-.3-2.3s-20.3-7.4-23.2-8.2c-10-2.9-19.9-6.1-28.5,2.2s-4.9,20.4,6.2,22.3c13.7,2.3,33-9.7,45.8-14.1Z"/>
+          </symbol>
+          <symbol id="germination-icon" viewBox="0 0 201 137.2">
+            <path d="M139,23.2c-32.4,3.1-67.6,20.6-78.4,53.3,19.7-24,52.1-40.6,83.3-42,16.1-.7,35.4,5.3,40.5,22.3,8.5,28.3-25,45-12.5,72.9-4.6-4.6-7.6-13.4-7.5-19.9.1-13.8,10.7-27.7,8.8-41-1.5-10.5-12.1-18.3-22.5-17s-4.2,4.6-6.1,8.9c-14,32.9-58.9,50-92.6,45.7-40.1-5.2-29.5-43.8-9.8-65.9,22.7-25.6,58.7-35.7,90.6-21.1,2,.9,4.9,2,6.2,3.9Z"/>
+          </symbol>
+          <symbol id="leafnbug-icon" viewBox="0 0 376.5 406.5">
+            <path d="M239.8,263.4c4-.7,19.8-.8,23.8-.1s4.6,4.1,4.9,7.8c1.9,23-1.5,48.8,0,72.1.8,6.2,9.6,6.3,10.6,0,1.6-23.7-2.2-50.3,0-73.6.2-2.6,1.3-5.8,4.2-6.3s20-.5,23.9,0c7.2,1,12.6,8.3,13.2,15.3,1.1,12.6,1.4,48.9-1.1,60.4-8.5,38.3-57.5,49.8-82.1,19.1-17-21.3-7.1-55.5-9.8-81,.6-6,6.6-12.7,12.6-13.7Z"/>
+            <path d="M265.6,233.2h15.2c2.2-.6,4.5-8.8,10.7-9.6s8.3,4.8,5.2,9-5.3,2.7-4.8,6.3c3.6,3,10.1,8.8,4.4,12.8l-46-.3c-3.8-4.8,1.6-9.9,5.6-12.5.5-3.1-10.1-7.8-4.9-13.8,4.6-5.3,13.6,3.1,14.7,8.1Z"/>
+            <path d="M215.9,336.1c.4.3,2.4,9.2,2.3,10-.1,1.7-2.1,4.3-2.6,6.4-1.3,4.9-.3,13.6-8.1,11.9s-3.7-11.6-2.3-16.2c.9-2.9,6.5-14.8,10.6-12.1Z"/>
+            <path d="M332.8,336.1c2.4-.6,6.3,5.6,7.3,7.5,2.3,4.5,7,19.2-.1,20.8s-6.8-6.5-8.1-11.1-2.2-4.2-2.5-5.8c-.4-2.3.8-10.7,3.4-11.4Z"/>
+            <path d="M201.5,299.4c1.4-.4,2.7-.2,4,.2s9.4,4.8,9.8,5.2c1.1,1.4,1.2,8.4,0,9.9-2,2.4-13.9-3.8-15.8-6s-1.7-8.1,2-9.2Z"/>
+            <path d="M342.6,299.4c5.2-1,8.7,4,6.1,8.4s-13.6,8.9-16.5,6.9c-1-1.9-1.2-7.7-.3-9.4s9.8-5.7,10.7-5.8Z"/>
+            <path d="M209,263.4c11-3.3,6.8,13.4,7,18.9-2.3,5.4-4.7,1.5-6.6-1.6s-7-15.3-.4-17.3Z"/>
+            <path d="M332.5,264.2c3.3-2.7,9.1-.5,9.5,4s-5.2,20.9-10.3,14c.3-4.8-3.5-14.5.8-18Z"/>
+            <path d="M311.1,220.3l-1.9.8c-2.7.5-3.6-2.9-5-4.1-8.4-7.2-15.9-5.8-24.4.2-2.1,1.5-2.9,3.9-5.7,4.1-4.4.3-5.8-3.6-8.7-5.6-12.9-9.1-29.1.8-26.9,16.4.3,2,2.1,4.7,2,5.9s-2.5,4-3.2,5.8c-2.8,6.7-2.2,10.9-10.3,13.7-4.6,1.6-6-3.7-11.2-4.9-18.2-4.4-25,13-19.2,28.2s3.5,4.5,2.8,6.8-4.1,2.4-5.5,3.5c-10.9,8.5-8.9,22,2.4,29.1s10.6,3.5,8.9,7.6c-2.4,5.5-10.6,7.3-16,8.8-50.3,14.7-104.1-.4-138-40-.7-3.8,26.3-35,31.2-39.1,3.5-1,4.1,1.7,6.3,3.2,5.8,3.9,11.8,7.8,18.5,10s10.7,2.1,16.2,3.3c1.8,1.2,2.9,6.3,4.2,8.6,6.3,10.9,19.6,19.9,32.7,18.4,7.2-.9,7.6-9.7.6-11.1s-7.8,0-12.7-2.3-12.5-9.1-11.4-13.1,16.5-2,15.7-11.4-12.1-2.2-16.4-1.3c-9.7,1.9-19.2,1.1-28.4-2.6s-13.6-7-14.4-9.7,6.9-8.7,9.3-10.7c26.9-22.8,51.6-32,83.8-44.5s10.5-5.3,12.6-4.8,4.2,2.9,6,3.8c5.8,2.9,12.4,5.6,18.7,6.8s18.3,3.9,16.5-6-11.5-4.4-15.8-5.3-12-2.8-12.8-6.7c.2-1.9,13.6-11.6,16.2-13.9,5.6-5,12.1-11.8,16.8-17.7s8.6-10.7,9.3-13.3c1.4-5.2-4.8-8.9-8.9-5.9s-9.6,13-12.7,16.5c-8.6,9.7-20.2,19.8-31.2,26.6s-18.2,12.3-18,3.1,1.1-9.9,1.9-13.2c1.1-4.9,8.5-16.1,1.9-19.1s-12.1,13.6-13.2,19.1c-1.5,7.9-.5,15.4-1.8,23-13.5,5.2-26.9,10.6-39.6,17.4-3.3,1.8-15.4,10.3-17.8,9.9l-1.5-.8c-2.4-2.4-.7-15.2,0-18.8s6.1-14.5,1.6-18c-7.9-6.1-10.8,8.7-11.9,13.6s-2.3,12.9-2,19,2.6,12.8,1.4,14.9c-32.8,26-59.7,59-78.9,96.3-2.7,2.6-8,1.5-9.2-2s2.9-9.6,4.5-12.8c5.2-10,12.1-19,17.6-28.9-9.2-15.5-16.7-33.2-19.3-51.2s-2.8-17,3.9-22.7,14.7-.2,22.5.7c28.2,3.2,39.9-32.8,16.1-46.1-5.3-3-12.7-2.6-16.3-8.4s-3-8.5-1.2-13c2-5.1,13-16.9,18.2-18.6,10.3-3.3,12.7,5,20.8,5.8s16.1-3.7,18.4-11.6-.8-11.5,4.8-16.9c4.9-4.7,21.5-6.2,28.5-6.7,6.4-.5,20.4-1.7,26.1-.6s8.3,8,11.5,13.3c7.8,13.2,28.6,12.1,34.6-2s.4-13.8,9.4-18.3c6.1-3.1,12.8-4.7,19.2-8.6,15.4-9.3,22.4-24.8,43.2-23.6s22.8,8.1,28,18.5,9.8,26.4,9.1,32.9c-1.1,10.8-11.8,10.2-18.5,15.2-14.2,10.5-11.8,33.9,4.7,40.7,7.1,2.9,14.4.5,19.5,8.3s1.2,17.5.2,24.1c-1.7,10.9-4.7,21.5-8.2,31.9ZM162.3,144.1c0-12.3-10-22.2-22.2-22.2s-22.2,10-22.2,22.2,10,22.2,22.2,22.2,22.2-10,22.2-22.2ZM198.5,236.6c0-6.1-5-11.1-11.1-11.1s-11.1,5-11.1,11.1,5,11.1,11.1,11.1,11.1-5,11.1-11.1Z"/>
+          </symbol>
+          <symbol id="barn-icon" viewBox="0 0 339.8 357">
+            <path d="M0,177.4L47,63.8l3.1-3.6c35.7-14.6,71-31,107.1-44.9,2.9-1.1,7.8-3.5,10.8-3.4s7.4,2.4,10.1,3.4c35.4,13.6,69.9,30.1,105.3,43.6l4,3.5,47.6,114.9c1.9,4.4-3,12-7.5,12h-23.6v150.1c0,2.2-5.4,7.9-7.9,7.9h-55.8v-119.4c0-3.1-6.9-7.5-10.1-7.1-40.2,2.2-83.6-2.9-123.5,0-3.4.2-6.9.8-9.3,3.4s-2.2,3.5-2.2,3.8v119.4h-55.8c-2.5,0-7.9-5.7-7.9-7.9v-150.1H7.9c-3.3,0-6.9-4.6-7.9-7.5v-4.5ZM136,75c-5,.9-8.9,2.9-9.6,8.4-2.4,20.2,1.9,45.2,0,65.9.9,5.7,4.6,8.1,10.1,8.6,20.6,1.8,44.6-1,65.4-.5,4.3-1.2,6.5-4.5,6.9-8.8,2-20.5-1.6-44.3,0-65.2-.8-6.3-6-8.1-11.6-8.6-19.5-1.7-41.5,1.1-61.2.2Z"/>
+            <rect x="145.9" y="95.1" width="43.4" height="43.4"/>
+            <polygon points="206.5 240.2 167.9 279.9 128.7 240.2 206.5 240.2"/>
+            <polygon points="114.5 333.1 114.5 255.2 153.4 293.9 114.5 333.1"/>
+            <polygon points="220.8 333.1 181.9 294.4 220.8 255.2 220.8 333.1"/>
+            <polygon points="206.5 347.3 128.7 347.3 167.4 308.4 206.5 347.3"/>
+          </symbol>
+        </svg>
 
-    <div class="dropdown position-fixed top-0 end-0 mb-5 me-3 p-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary btn-sm py-2 dropdown-toggle d-flex align-items-center"
+    <div class="dropdown position-fixed top-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center mt-3"
               id="bd-theme"
               type="button"
               aria-expanded="false"
@@ -198,146 +252,169 @@
         </li>
       </ul>
     </div>
-    </head>
 
-    <body class="d-flex flex-column h-100">
-    <!-- Begin page content -->
-    <main class="flex-shrink-0">
-      <div class="container-fluid px-5">
-        <h1 class="mt-3">UFPS Data Management and Analysis Pipeline</h1>
-      </div>
+    <!-- Flex container for sidebar and main content -->
+    <div class="d-flex flex-column min-vh-100">
+        <div class="d-flex flex-grow-1">
+        <!-- Sidebar -->
+        <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary sidebar" style="width: 4.5rem; min-height:100vh;">
+          <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" title="PR" data-bs-toggle="tooltip" data-bs-placement="right">
+            <svg class="icon" width="40" height="40" fill="currentColor">
+              <use href="#brand"></use>
+            </svg>
+          </a>
+          <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon" width="20" height="20" fill="currentColor">
+                  <use href="#barn-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <svg class="icon" width="20" height="20" fill="currentColor">
+                  <use href="#yield-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon" width="24" height="24" fill="currentColor">
+                  <use href="#germination-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <svg class="icon" width="24" height="24" fill="currentColor">
+                  <use href="#leafnbug-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="dropdown border-top">
+            <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://prabahar.s3.ca-central-1.amazonaws.com/static/articles/GitProfilePic.png" alt="Prabahar Ravichandran" width="24" height="24" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small shadow">
+              <li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      <!-- Main content -->
+      <div class="flex-grow-1 d-flex flex-column">
+        <div class="container-fluid px-5">
+          <h1 class="mt-3">Days to Flowering & Maturity (or Yield) Estimation</h1>
+        </div>
 
-      <section class="container-fluid px-lg-5 mt-5">
-        <article class="my-3" id="overview">
-          <h2 style="color: #F80;">Days to Flowering & Maturity (or Yield) Estimation</h2>
-          <div class="row" style="margin-left: 10px;">
-            <!-- Left column: Form -->
-            <div class="col-md-4">
-              <h3>File upload for prediction</h3>
-              <form method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                <!-- RGB Image -->
-                <div class="mb-3 w-50" style="max-width: 300px;">
-                  <label class="form-label" for="rgbimage">RGB Image (.TIF)</label>
-                  <input type="file" class="form-control" id="rgbimage" name="rgbimage" accept=".tif">
+        <section class="container-fluid px-lg-5 mt-5">
+          <article class="my-3" id="overview">
+            <div class="row" style="margin-left: 10px;">
+              <!-- Left column: Form -->
+              <div class="col-md-4">
+                <h3>File upload for prediction</h3>
+                <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="mb-3 w-50" style="max-width: 300px;">
+                    <label class="form-label" for="rgbimage">RGB Image (.TIF)</label>
+                    <input type="file" class="form-control" id="rgbimage" name="rgbimage" accept=".tif">
+                  </div>
+                  <div class="mb-3 w-50" style="max-width: 300px;">
+                    <label class="form-label" for="nirimage">NIR Image (.TIF)</label>
+                    <input type="file" class="form-control" id="nirimage" name="nirimage" accept=".tif">
+                  </div>
+                  <div class="mb-3 w-50" style="max-width: 300px;">
+                    <label class="form-label" for="lidardata">LiDAR Data (.NPY)</label>
+                    <input type="file" class="form-control" id="lidardata" name="lidardata" accept=".npy">
+                  </div>
+                  <div class="mb-3 w-50" style="max-width: 300px;">
+                    <label class="form-label" for="weatherdata">Weather Data (.NPY)</label>
+                    <input type="file" class="form-control" id="weatherdata" name="weatherdata" accept=".npy">
+                  </div>
+                  <div class="mb-3 w-30" style="max-width: 200px;">
+                    <label for="imagingdate" class="form-label">Imaging Date</label>
+                    <input type="date" class="form-control" id="imagingdate" name="imagingdate">
+                  </div>
+                  <div class="mb-3 w-30" style="max-width: 200px;">
+                    <label for="seedingdate" class="form-label">Seeding Date</label>
+                    <input type="date" class="form-control" id="seedingdate" name="seedingdate">
+                  </div>
+                  <div class="mb-3 form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" name="predict_flowering_maturity" checked>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">
+                      Flowering & Maturity? Uncheck for Yield
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Predict</button>
+                </form>
+              </div>
+              <!-- Middle column: Input shapes debug -->
+              <div class="col-md-4">
+                <h3>Input</h3>
+                {% if shapes_info %}
+                  {% for shape in shapes_info %}
+                    <p style="font-size:1em;">
+                      {{ shape.label }}<br>
+                      <span style="margin-left:1em;">{{ shape.value }}</span>
+                    </p>
+                  {% endfor %}
+                {% else %}
+                  <p>No input shapes available.</p>
+                {% endif %}
+              </div>
+              <!-- Right column: Output -->
+              <div class="col-md-4">
+                <h3>Output</h3>
+                {% if days_to_flowering and days_to_maturity %}
+                  <p style="font-size: 1.5em; margin: 0;">Days to Flowering</p>
+                  <span style="font-size: 8em; color: #F80;">
+                    {{ days_to_flowering|floatformat:"0" }}
+                    <span style="font-size: 0.25em"> days</span>
+                  </span><br>
+                  <p style="font-size: 1.5em; margin: 0;">Days to Maturity</p>
+                  <span style="font-size: 8em; color: #F80;">
+                    {{ days_to_maturity|floatformat:"0" }}
+                    <span style="font-size: 0.25em"> days</span>
+                  </span>
+                {% elif predicted_yield %}
+                  <p style="font-size: 1.5em; margin: 0;">Predicted Yield</p>
+                  <span style="font-size: 8em; color: #F80;">
+                    {{ predicted_yield|floatformat:"0" }}
+                    <span style="font-size: 0.25em"> kg/ha</span>
+                  </span>
+                {% else %}
+                  <p>No predictions available yet.</p>
+                {% endif %}
+                {% if prediction_time %}
+                  <p style="font-size: 1.5em; margin: 0;">Inference time (backend)</p>
+                  <span style="color: #F80 !important;">{{ prediction_time }}</span>
+                {% endif %}
+                <div id="frontend-prediction-time">
+                  <!-- Updated by JavaScript after page reload -->
                 </div>
-
-                <!-- NIR Image -->
-                <div class="mb-3 w-50" style="max-width: 300px;">
-                  <label class="form-label" for="nirimage">NIR Image (.TIF)</label>
-                  <input type="file" class="form-control" id="nirimage" name="nirimage" accept=".tif">
-                </div>
-
-                <!-- LiDAR Data -->
-                <div class="mb-3 w-50" style="max-width: 300px;">
-                  <label class="form-label" for="lidardata">LiDAR Data (.NPY)</label>
-                  <input type="file" class="form-control" id="lidardata" name="lidardata" accept=".npy">
-                </div>
-
-                <!-- Weather Data -->
-                <div class="mb-3 w-50" style="max-width: 300px;">
-                  <label class="form-label" for="weatherdata">Weather Data (.NPY)</label>
-                  <input type="file" class="form-control" id="weatherdata" name="weatherdata" accept=".npy">
-                </div>
-
-                <!-- Imaging Date -->
-                <div class="mb-3 w-30" style="max-width: 200px;">
-                  <label for="imagingdate" class="form-label">Imaging Date</label>
-                  <input type="date" class="form-control" id="imagingdate" name="imagingdate">
-                </div>
-
-                <!-- Seeding Date -->
-                <div class="mb-3 w-30" style="max-width: 200px;">
-                  <label for="seedingdate" class="form-label">Seeding Date</label>
-                  <input type="date" class="form-control" id="seedingdate" name="seedingdate">
-                </div>
-
-                <!-- Switch: If checked -> Flowering & Maturity, else -> Yield -->
-                <div class="mb-3 form-check form-switch">
-                  <!-- IMPORTANT: add a name attribute so Django sees this in request.POST -->
-                  <input class="form-check-input" type="checkbox" role="switch"
-                         id="flexSwitchCheckChecked" name="predict_flowering_maturity" checked>
-                  <label class="form-check-label" for="flexSwitchCheckChecked">
-                    Flowering & Maturity? Uncheck for Yield
-                  </label>
-                </div>
-                <button type="submit" class="btn btn-primary">Predict</button>
-              </form>
-            </div>
-
-            <!-- Middle column: Input shapes debug -->
-            <div class="col-md-4">
-              <h3>Input</h3>
-              {% if shapes_info %}
-                {% for shape in shapes_info %}
-                  <p style="font-size:1em;">
-                    {{ shape.label }}<br>
-                    <span style="margin-left:1em;">{{ shape.value }}</span>
-                  </p>
-                {% endfor %}
-              {% else %}
-                <p>No input shapes available.</p>
-              {% endif %}
-            </div>
-
-            <!-- Right column: Output -->
-            <div class="col-md-4">
-              <h3>Output</h3>
-
-              {% if days_to_flowering and days_to_maturity %}
-                <!-- Show Flowering & Maturity -->
-                <p style="font-size: 1.5em; margin: 0;">Days to Flowering</p>
-                <span style="font-size: 8em; color: #F80;">
-                  {{ days_to_flowering|floatformat:"0" }}
-                  <span style="font-size: 0.25em"> days</span>
-                </span><br>
-                <p style="font-size: 1.5em; margin: 0;">Days to Maturity</p>
-                <span style="font-size: 8em; color: #F80;">
-                  {{ days_to_maturity|floatformat:"0" }}
-                  <span style="font-size: 0.25em"> days</span>
-                </span>
-
-              {% elif predicted_yield %}
-                <!-- Show Yield -->
-                <p style="font-size: 1.5em; margin: 0;">Predicted Yield</p>
-                <span style="font-size: 8em; color: #F80;">
-                  {{ predicted_yield|floatformat:"0" }}
-                  <span style="font-size: 0.25em"> kg/ha</span>
-                </span>
-
-              {% else %}
-                <p>No predictions available yet.</p>
-              {% endif %}
-
-              <!-- Backend inference time -->
-              {% if prediction_time %}
-                <p style="font-size: 1.5em; margin: 0;">Inference time (backend)</p>
-                <span style="color: #F80 !important;">{{ prediction_time }}</span>
-              {% endif %}
-
-              <!-- Frontend inference time -->
-              <div id="frontend-prediction-time">
-                <!-- Will be updated by JavaScript after page reload -->
               </div>
             </div>
+          </article>
+        </section>
+        <footer class="footer mt-auto py-3 bg-body-tertiary">
+          <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
+            <span class="text-body-secondary" style="color: #F80 !important;">
+              ©2025 Agriculture and Agri-Food Canada
+            </span>
+            <span class="text-body-secondary">
+              PRsIE-runtime1.0
+            </span>
           </div>
-        </article>
-      </section>
-    </main>
-
-    <footer class="footer mt-auto py-3 bg-body-tertiary">
-      <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
-        <span class="text-body-secondary" style="color: #F80 !important;">
-          ©2025 Agriculture and Agri-Food Canada
-        </span>
-        <!-- Right-corner text -->
-        <span class="text-body-secondary">
-          PRsIE-runtime1.0
-        </span>
+        </footer>
       </div>
-    </footer>
-
-
-    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="{% static 'assets/dist/js/sidebars.js' %}"></script>
+      <script src="{% static 'assets/dist/js/color-modes.js' %}"></script>
   </body>
 </html>

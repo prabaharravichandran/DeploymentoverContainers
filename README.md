@@ -1,7 +1,7 @@
 # Building Containers for the Deployment of Django Applications in AWS
 
 <figure style="text-align: center;">
-  <img src="https://prabahar.s3.ca-central-1.amazonaws.com/static/articles/ApplicationUI_v2.png" alt="Alt Text" style="max-width:100%;">
+  <img src="https://prabahar.s3.ca-central-1.amazonaws.com/static/articles/ApplicationUI_v3.png" alt="Alt Text" style="max-width:100%;">
     <figcaption style="text-align: center;">Django application user interface.</figcaption>
 </figure>
 
@@ -45,9 +45,11 @@ tar -xzvf apptainer_blankDjango+Gunicorn.tar.gz
 
 Create Dockerfile (i.e. recipe), build and run,
 
+Just move the Dockerfile and asset file (ufps) that is to be copied for the docker engine to access,
+
 ```bash
-docker build -t ufps-apptainer .
-docker run -p 8000:8000 ufps-apptainer
+docker build -t ufps-docker .
+docker run -p 8000:8000 ufps-docker
 ```
 
 to archive/save the image,
@@ -132,6 +134,9 @@ add,
 server {
     listen 80;
     server_name localhost;  # Important replace with Elastic IP
+
+    # Set max allowed size for a request body
+    client_max_body_size 50M;
 
     location / {
         proxy_pass http://127.0.0.1:8000;  # Gunicorn will be listening here

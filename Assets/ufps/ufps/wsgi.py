@@ -14,5 +14,5 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ufps.settings')
 
 application = get_wsgi_application()
-application = WhiteNoise(application, root="/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps/static")
-application.add_files("/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps/static", prefix="more-files/")
+application = WhiteNoise(application, root="/home/ufps/static")
+application.add_files("/home/ufps/static", prefix="more-files/")

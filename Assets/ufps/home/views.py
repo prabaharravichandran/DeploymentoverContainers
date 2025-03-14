@@ -12,12 +12,12 @@ import tensorflow as tf
 # 1) Load both models, giving them separate names
 # -------------------------------------------------------------------------
 days_model = tf.keras.models.load_model(
-    "/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps/static/assets/models/maturity.h5",
+    "/home/ufps/static/assets/models/maturity.h5",
     custom_objects={"mse": tf.keras.losses.MeanSquaredError()}
 )
 
 yield_model = tf.keras.models.load_model(
-    "/gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/Assets/ufps/static/assets/models/yield.h5",
+    "/home/ufps/static/assets/models/yield.h5",
     custom_objects={"mse": tf.keras.losses.MeanSquaredError()}
 )
 

@@ -4,6 +4,38 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/AWS/AWS_apptainer" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/bootstrap-5.3.3-examples" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps/staticfiles" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/.singularity.d" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/boot" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/dev" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/etc" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/fs" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/gpfs" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/prr000" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/ubuntu" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/ufps/home" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/ufps/static" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/ufps/staticfiles/admin" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/ufps/staticfiles/assets/brand" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/ufps/staticfiles/assets/dist/css" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/ufps/staticfiles/assets/images" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/ufps/staticfiles/assets/models" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/ufps/ufps" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/home/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/lib.usr-is-merged" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/media" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/mnt" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/opt" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/proc" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/root" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/run" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/space" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/srv" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/sys" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/usr" />
+      <excludeFolder url="file://$MODULE_DIR$/Assets/ufps_sandbox/var" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.12 virtualenv at /gpfs/fs7/aafc/phenocart/PhenomicsProjects/DeploymentoverContainers/venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
