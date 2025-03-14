@@ -4,10 +4,11 @@
 
 The project integrates deep learning models for predicting days to maturity, flowering, and yield, leveraging LiDAR, RGB, NIR, and weather data for inference. The application is designed for high-performance computing environments, enabling efficient processing and scalability. Static files are managed using WhiteNoise, eliminating dependencies on external storage services. The repository also includes automation scripts for pushing images to AWS Elastic Container Registry (ECR) and launching pre-configured EC2 instances. With a user-friendly web interface, this setup allows researchers and developers to effortlessly deploy, manage, and run predictions on large-scale agricultural datasets.
 
-<figure style="text-align: center;">
-  <img src="https://prabahar.s3.ca-central-1.amazonaws.com/static/articles/ApplicationUI_v3.png" alt="Alt Text" style="max-width:100%;">
-    <figcaption style="text-align: center;">Django application user interface.</figcaption>
-</figure>
+<p align="center">
+  <img src="https://prabahar.s3.ca-central-1.amazonaws.com/static/articles/ApplicationUI_v3.png" alt="Django application user interface" width="80%">
+  <br>
+  <em>Figure 1: Django application user interface.</em>
+</p>
 
 ## Recipes for base images are located @ Images/Base Images
 
