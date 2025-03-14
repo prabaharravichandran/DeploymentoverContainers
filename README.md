@@ -1,4 +1,4 @@
-# **Building Containers for the Deployment of Django Applications in AWS**
+<h1><strong>Building Containers for the Deployment of Django Applications in AWS</strong></h1>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
