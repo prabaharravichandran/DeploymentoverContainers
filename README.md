@@ -1,5 +1,7 @@
 # Building Containers for the Deployment of Django Applications in AWS
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 <figure style="text-align: center;">
   <img src="https://prabahar.s3.ca-central-1.amazonaws.com/static/articles/ApplicationUI_v3.png" alt="Alt Text" style="max-width:100%;">
     <figcaption style="text-align: center;">Django application user interface.</figcaption>
